@@ -1,0 +1,98 @@
+/*form fields error state*/
+.nav {
+  background-color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
+.nav__home {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .nav__home {
+    justify-content: flex-start;
+    padding: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav__home {
+    justify-content: flex-start;
+    padding: auto;
+  }
+}
+.nav__logo {
+  max-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    padding-right: 4rem;
+  }
+}
+.nav__links {
+  color: #FFFFFF;
+  list-style: none;
+  padding: 0 0 1rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+.nav__link {
+  padding-right: 1rem;
+  -webkit-text-decoration: underline 0.15rem solid #FFFFFF;
+          text-decoration: underline 0.15rem solid #FFFFFF;
+  text-underline-offset: 1.1rem;
+}
+@media screen and (min-width: 768px) {
+  .nav__link {
+    padding-right: 2.25rem;
+    -webkit-text-decoration: underline 0.15rem solid #FFFFFF;
+            text-decoration: underline 0.15rem solid #FFFFFF;
+    text-underline-offset: 2.1rem;
+  }
+}
+.nav__link :hover {
+  text-decoration: underline;
+}
+.nav__link :active {
+  text-decoration: underline;
+}
+.nav__link-url {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Regular.woff2) format("woff2");
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Regular.woff) format("woff"); /*just in case woff2 isn't compatible*/
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Demi.woff2) format("woff2");
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Demi.woff) format("woff"); /*just in case woff2 isn't compatible*/
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Bold.woff2) format("woff2");
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Bold.woff) format("woff"); /*just in case woff2 isn't compatible*/
+  font-weight: 700;
+}
+body {
+  font-family: "Avenir";
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}/*# sourceMappingURL=bio.css.map */

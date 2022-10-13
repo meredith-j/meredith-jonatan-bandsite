@@ -1,0 +1,63 @@
+@use './colours' as *;
+@use './breakpoints' as *;
+@use './mixins' as *;
+
+.nav {
+    background-color: $primary-black;
+    @include tablet {
+        display: flex;
+    }
+    &__home {
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+
+        @include tablet {
+            justify-content: flex-start;
+            padding: 2.25rem;
+        }
+        @include desktop {
+            justify-content: flex-start;
+            padding: auto;
+        }
+    }
+        &__logo {
+            max-height: 1.25rem;
+            @include tablet {
+                padding-right: 4rem;
+            }
+        }
+    &__links {
+        color: $white;
+        list-style: none;
+        padding: 0 0 1rem 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+        @include tablet {
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        &__link {
+            padding-right: 1rem;
+            text-decoration: underline 0.15rem solid $white;
+            text-underline-offset: 1.1rem;
+
+            @include tablet {
+                padding-right: 2.25rem;
+                text-decoration: underline 0.15rem solid $white;
+                text-underline-offset: 2.1rem;
+            }
+            :hover {
+                text-decoration: underline;
+            }    
+            :active {
+                text-decoration: underline;
+            }
+            
+        }
+            &__link-url {
+                color: $white;
+                text-decoration: none;
+            }
+}

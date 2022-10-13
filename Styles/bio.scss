@@ -1,0 +1,13 @@
+@use './Partials/nav' as *;
+@use './Partials/colours' as *;
+@use './Partials/fonts' as *;
+@use './Partials/breakpoints' as *;
+
+body {
+    font-family: 'Avenir';
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
