@@ -1,3 +1,4 @@
+@use './Partials/hero' as *;
 @use './Partials/nav' as *;
 @use './Partials/colours' as *;
 @use './Partials/fonts' as *;
@@ -10,4 +11,5 @@ body {
 
 * {
     box-sizing: border-box;
+    margin: 0;
 }

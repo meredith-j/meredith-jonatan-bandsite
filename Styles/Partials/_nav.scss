@@ -4,6 +4,7 @@
 
 .nav {
     background-color: $primary-black;
+    margin: 0;
     @include tablet {
         display: flex;
     }
@@ -11,6 +12,7 @@
         display: flex;
         justify-content: center;
         padding-top: 1rem;
+        margin: 0;
 
         @include tablet {
             justify-content: flex-start;
@@ -30,7 +32,8 @@
     &__links {
         color: $white;
         list-style: none;
-        padding: 0 0 1rem 0;
+        padding: 1rem 0;
+        margin: 0;
         display: flex;
         justify-content: space-evenly;
     }
@@ -45,6 +48,7 @@
 
             @include tablet {
                 padding-right: 2.25rem;
+                padding-bottom: 1rem;
                 text-decoration: underline 0.15rem solid $white;
                 text-underline-offset: 2.1rem;
             }

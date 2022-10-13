@@ -1,6 +1,29 @@
 /*form fields error state*/
+.hero {
+  margin: 0;
+  background-image: url(../../Assets/Images/hero-bio.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: left;
+  box-shadow: inset 0rem 25rem rgba(50, 50, 50, 0.5);
+  width: 100%;
+  height: 30vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.hero__heading {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 2.25rem;
+  position: absolute;
+  padding-left: 1rem;
+  z-index: 8;
+}
+
 .nav {
   background-color: #323232;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .nav {
@@ -11,6 +34,7 @@
   display: flex;
   justify-content: center;
   padding-top: 1rem;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .nav__home {
@@ -35,7 +59,8 @@
 .nav__links {
   color: #FFFFFF;
   list-style: none;
-  padding: 0 0 1rem 0;
+  padding: 1rem 0;
+  margin: 0;
   display: flex;
   justify-content: space-evenly;
 }
@@ -54,6 +79,7 @@
 @media screen and (min-width: 768px) {
   .nav__link {
     padding-right: 2.25rem;
+    padding-bottom: 1rem;
     -webkit-text-decoration: underline 0.15rem solid #FFFFFF;
             text-decoration: underline 0.15rem solid #FFFFFF;
     text-underline-offset: 2.1rem;
@@ -95,4 +121,5 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }/*# sourceMappingURL=bio.css.map */
