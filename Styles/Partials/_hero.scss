@@ -1,4 +1,6 @@
 @use './colours' as *;
+@use './breakpoints' as *;
+@use './mixins' as *;
 
 .hero {
     margin: 0;
@@ -13,10 +15,13 @@
     display: flex;
     align-items: center;
 
+    @include tablet {
+        box-shadow: inset 10rem 35rem rgba(50, 50, 50, 0.5);
+        height: 50vh;
+    }
+
     &__heading {
         color: $white;
-        font-weight: 600;
-        font-size: 2.25rem;
         position: absolute;
         padding-left: 1rem;
         z-index: 8;

@@ -1,4 +1,6 @@
 /*form fields error state*/
+/*mobile is only used on the hero in order for the
+image/opacity to scale neatly */
 @font-face {
   font-family: "Avenir";
   src: url(../../Assets/Fonts/AvenirNextLTPro-Regular.woff2) format("woff2");
@@ -17,26 +19,104 @@
   src: url(../../Assets/Fonts/AvenirNextLTPro-Bold.woff) format("woff"); /*just in case woff2 isn't compatible*/
   font-weight: 700;
 }
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 4.35rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 3.75rem;
+    font-weight: 700;
+  }
+}
+
+h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+  }
+}
+
+p {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+  }
+}
+
+button {
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  button {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+  }
+}
+
 .footer {
   background-color: #323232;
   color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  padding-left: 1rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    position: relative;
+    padding: 2.25rem;
+  }
 }
 .footer__find-us {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .footer__find-us {
+    flex-direction: row;
+  }
+}
 .footer__header {
   font-size: 1.5rem;
   font-weight: 600;
-  padding-top: 1.5rem;
+  line-height: normal;
+  padding: 1rem 2rem 0 0;
 }
 .footer__socials {
   display: flex;
   align-items: flex-end;
   padding: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__socials {
+    padding: 0;
+  }
 }
 .footer__social {
   min-width: 3.25rem;
@@ -49,6 +129,14 @@
 .footer__credits {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__credits {
+    padding: 1rem 0 0 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
 .footer__agent-info {
   display: flex;
@@ -67,12 +155,25 @@
   font-weight: 400;
 }
 .footer__logo {
-  max-width: 9rem;
+  max-width: 12rem;
   padding-top: 3rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    padding: 0;
+    position: absolute;
+    top: 3.25rem;
+    right: 2rem;
+    height: 1.25rem;
+  }
+}
 .footer__copyright {
-  font-size: 0.75rem;
-  padding: 1.5rem 0 1rem 0;
+  padding: 1rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    padding: 3rem 0 0 0;
+  }
 }
 
 .hero {
@@ -88,10 +189,14 @@
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    box-shadow: inset 10rem 35rem rgba(50, 50, 50, 0.5);
+    height: 50vh;
+  }
+}
 .hero__heading {
   color: #FFFFFF;
-  font-weight: 600;
-  font-size: 2.25rem;
   position: absolute;
   padding-left: 1rem;
   z-index: 8;
@@ -148,8 +253,7 @@
 }
 .nav__link {
   padding-right: 1rem;
-  -webkit-text-decoration: underline 0.15rem solid #FFFFFF;
-          text-decoration: underline 0.15rem solid #FFFFFF;
+  border-bottom: solid 0.15rem #FFFFFF;
   text-underline-offset: 1.1rem;
 }
 @media screen and (min-width: 768px) {
@@ -187,39 +291,56 @@ body {
   flex-direction: column;
   padding: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .about {
+    padding: 3rem;
+  }
+}
 .about__header {
   color: #323232;
-  font-weight: 600;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
+}
+.about__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 3rem 3rem 3rem;
 }
 .about__image {
   -o-object-fit: contain;
      object-fit: contain;
 }
 .about__quote, .about__quote-by {
-  padding-top: 1rem;
-  font-size: 1.25rem;
-  font-weight: 600;
+  padding: 1rem 0 0 0;
 }
 .about__subheader {
-  padding-top: 1.5rem;
-  font-size: 1.25rem;
-  font-weight: 500;
+  padding: 1.5rem 0 0 0;
+}
+.about__more-info {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .about__more-info {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 .about__content {
   font-size: 1.1rem;
-  padding-top: 1rem;
+  padding: 1rem 0 0 0;
 }
 
 .gallery {
   background-color: #fafafa;
   padding: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding: 2rem;
+  }
+}
 .gallery__header {
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
 }
 .gallery__photos {
   display: flex;
@@ -227,8 +348,20 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media screen and (min-width: 768px) {
+  .gallery__photos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .gallery__photo {
   -o-object-fit: contain;
      object-fit: contain;
-  padding-top: 1rem;
+  padding: 1rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .gallery__photo {
+    width: 30vw;
+  }
 }/*# sourceMappingURL=bio.css.map */

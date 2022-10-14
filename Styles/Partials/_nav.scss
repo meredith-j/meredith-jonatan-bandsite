@@ -45,7 +45,7 @@
         }
         &__link {
             padding-right: 1rem;
-            text-decoration: underline 0.15rem solid $white;
+            border-bottom: solid 0.15rem $white;
             text-underline-offset: 1.1rem;
 
             @include tablet {
