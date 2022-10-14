@@ -56,13 +56,14 @@ body {
 
         @include tablet {
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: flex-start;
         }
     }
 
     &__content {
         font-size: 1.1rem;
         padding: 1rem 0 0 0;
+        justify-content: space-between;
     }
 }
 
@@ -71,7 +72,7 @@ body {
     padding: 1rem;
 
     @include tablet  {
-        padding: 2rem;
+        padding: 3rem;
     }
 
     &__header {
@@ -86,16 +87,34 @@ body {
         @include tablet {
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
         }
     }
 
     &__photo {
         object-fit: contain;
-        padding: 1rem 0 0 0;
 
         @include tablet {
-            width: 30vw;
+            width: 32%;
+            padding: 0 1rem 1rem 0;
+        }
+    }
+
+    &__photo:nth-child(3n) {
+        @include tablet {
+            padding: 0 0rem 1rem 0;
+        }
+    }
+
+    &__photo:nth-child(n+7) {
+        @include tablet {
+            padding: 0 1rem 0 0;
+        }
+    }
+
+&__photo:nth-child(9) {
+    @include tablet {
+        padding: 0;
         }
     }
 }
