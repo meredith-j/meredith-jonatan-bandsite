@@ -1,3 +1,73 @@
-@use './Partials/colours' as *;
-@use './Partials/fonts' as *;
-@use './Partials/breakpoints' as *;
+@use './colours' as *;
+@use './fonts' as *;
+@use './breakpoints' as *;
+
+.footer {
+    background-color: $primary-black;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+
+    &__find-us {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-top: 1.5rem;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: flex-end;
+        padding: 1rem 0;
+    }
+
+    &__social {
+        min-width: 3.25rem;
+        padding-right: 1.75rem;
+    }
+
+    &__social--resize {
+        min-width: auto;
+        min-height: 1.5rem;
+    }
+
+    &__credits {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__agent-info {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+    }
+
+    &__featured-info {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    &__info--bottom-line {
+        padding-bottom: 1rem;
+    }
+
+    &__info {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    &__logo {
+        max-width: 9rem;
+        padding-top: 3rem;
+    }
+
+    &__copyright {
+        font-size: 0.75rem;
+        padding: 1.5rem 0 1rem 0;
+    }
+}
