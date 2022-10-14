@@ -1,3 +1,4 @@
+@use './Partials/footer' as *;
 @use './Partials/hero' as *;
 @use './Partials/nav' as *;
 @use './Partials/colours' as *;
@@ -12,4 +13,60 @@ body {
 * {
     box-sizing: border-box;
     margin: 0;
+}
+
+//the sections on this page are specific to the bio page - content is not structured the same anywhere else
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    &__header {
+        color: $primary-black;
+        font-weight: 600;
+        padding-top: 1.5rem; 
+        padding-bottom: 1rem;
+    }    
+    &__image {
+        object-fit: contain;
+    }
+
+    &__quote, &__quote-by {
+        padding-top: 1rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    &__subheader {
+        padding-top: 1.5rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+    
+    &__content {
+        font-size: 1.1rem;
+        padding-top: 1rem;
+    }
+}
+
+.gallery {
+    background-color: $alabaster;
+    padding: 1rem;
+
+    &__header {
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-top: 1.5rem;
+    }
+
+    &__photos {
+        display: flex;
+        flex-direction: column;
+        object-fit: contain;
+    }
+
+    &__photo {
+        object-fit: contain;
+        padding-top: 1rem;
+    }
 }

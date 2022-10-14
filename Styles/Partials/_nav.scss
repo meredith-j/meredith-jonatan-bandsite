@@ -2,6 +2,8 @@
 @use './breakpoints' as *;
 @use './mixins' as *;
 
+
+//nav is here so that it can be linked to additional pages with minimal code
 .nav {
     background-color: $primary-black;
     margin: 0;
