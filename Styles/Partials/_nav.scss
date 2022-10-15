@@ -6,19 +6,18 @@
 //nav is here so that it can be linked to additional pages with minimal code
 .nav {
     background-color: $primary-black;
-    margin: 0;
+
     @include tablet {
         display: flex;
     }
     &__home {
         display: flex;
         justify-content: center;
-        padding-top: 1rem;
-        margin: 0;
+        padding: 1.5rem 0;
 
         @include tablet {
             justify-content: flex-start;
-            padding: 2.25rem;
+            padding: 3rem 4rem;
         }
         @include desktop {
             justify-content: flex-start;
@@ -26,44 +25,64 @@
         }
     }
         &__logo {
-            max-height: 1.25rem;
+            width: 15rem;
             @include tablet {
-                padding-right: 4rem;
+                width: 16rem;
             }
         }
     &__links {
-        color: $white;
+        color: $alabaster;
         list-style: none;
-        padding: 1rem 0;
-        margin: 0;
         display: flex;
-        justify-content: space-evenly;
+        padding: 0;
     }
         @include tablet {
             justify-content: flex-start;
             align-items: flex-end;
         }
+
+        &__link-url {
+            color: $alabaster;
+            text-decoration: none;
+        }
+
         &__link {
-            padding-right: 1rem;
-            border-bottom: solid 0.15rem $white;
-            text-underline-offset: 1.1rem;
+            color: $alabaster;
+            font-size: 1.75rem;
+            text-align: center;
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
 
             @include tablet {
-                padding-right: 2.25rem;
-                padding-bottom: 1rem;
-                text-decoration: underline 0.15rem solid $white;
-                text-underline-offset: 2.1rem;
+                margin: 3 0 6rem 0;
+                display: flex;
+                align-items: flex-start;
             }
+
             :hover {
-                text-decoration: underline;
+                width: 100%;
+                padding-bottom: 1.25rem;
+                border-bottom: solid 0.25rem $alabaster;
+
+                @include tablet {
+                    padding-bottom: 2.8rem;
+                    border-bottom: underline 0.15rem solid $alabaster;
+                    width: fit-content;
+                }
             }    
             :active {
-                text-decoration: underline;
+                width: 100%;
+                padding-bottom: 1.25rem;
+                color: $white;
+                border-bottom: solid 0.25rem $white;
+
+                @include tablet {
+                    padding-bottom: 2.8rem;
+                    border-bottom: underline 0.15rem solid $white;
+                    width: fit-content;
+                }
             }
             
         }
-            &__link-url {
-                color: $white;
-                text-decoration: none;
-            }
-}
+    }

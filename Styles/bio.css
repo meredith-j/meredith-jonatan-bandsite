@@ -20,9 +20,9 @@ image/opacity to scale neatly */
   font-weight: 700;
 }
 h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3rem;
 }
 @media screen and (min-width: 768px) {
   h1 {
@@ -33,8 +33,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.85rem;
 }
 @media screen and (min-width: 768px) {
   h2 {
@@ -44,8 +45,8 @@ h2 {
 }
 
 h3 {
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 400;
   line-height: 1.375rem;
 }
 @media screen and (min-width: 768px) {
@@ -59,7 +60,7 @@ h3 {
 p {
   font-size: 0.8125rem;
   font-weight: 400;
-  line-height: 1.125rem;
+  line-height: 1.65rem;
 }
 @media screen and (min-width: 768px) {
   p {
@@ -180,31 +181,47 @@ button {
   margin: 0;
   background-image: url(../../Assets/Images/hero-bio.jpg);
   background-size: 100%;
+  background-position: auto;
   background-repeat: no-repeat;
-  position: left;
-  box-shadow: inset 10rem 25rem rgba(50, 50, 50, 0.5);
+  position: relative;
   width: 100%;
-  height: 30vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .hero {
-    box-shadow: inset 10rem 35rem rgba(50, 50, 50, 0.5);
-    height: 50vh;
+  height: 14rem;
+  z-index: 1;
+  /*@include mini {
+      height: 20rem;
   }
+
+  @include mobile {
+      height: 30rem;
+  } */
+}
+@media screen and (min-width: 550px) {
+  .hero {
+    height: 23rem;
+  }
+}
+.hero__filter {
+  position: absolute;
+  background-size: auto;
+  background-color: #323232;
+  opacity: 50%;
+  width: 100%;
+  height: inherit;
 }
 .hero__heading {
   color: #FFFFFF;
   position: absolute;
-  padding-left: 1rem;
+  padding: 15% 1rem;
   z-index: 8;
+}
+@media screen and (min-width: 550px) {
+  .hero__heading {
+    padding: 25% 1rem;
+  }
 }
 
 .nav {
   background-color: #323232;
-  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .nav {
@@ -214,13 +231,12 @@ button {
 .nav__home {
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
-  margin: 0;
+  padding: 1.5rem 0;
 }
 @media screen and (min-width: 768px) {
   .nav__home {
     justify-content: flex-start;
-    padding: 2.25rem;
+    padding: 3rem 4rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -230,20 +246,18 @@ button {
   }
 }
 .nav__logo {
-  max-height: 1.25rem;
+  width: 15rem;
 }
 @media screen and (min-width: 768px) {
   .nav__logo {
-    padding-right: 4rem;
+    width: 16rem;
   }
 }
 .nav__links {
-  color: #FFFFFF;
+  color: #fafafa;
   list-style: none;
-  padding: 1rem 0;
-  margin: 0;
   display: flex;
-  justify-content: space-evenly;
+  padding: 0;
 }
 @media screen and (min-width: 768px) {
   .nav {
@@ -251,29 +265,53 @@ button {
     align-items: flex-end;
   }
 }
+.nav__link-url {
+  color: #fafafa;
+  text-decoration: none;
+}
 .nav__link {
-  padding-right: 1rem;
-  border-bottom: solid 0.15rem #FFFFFF;
-  text-underline-offset: 1.1rem;
+  color: #fafafa;
+  font-size: 1.75rem;
+  text-align: center;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
 }
 @media screen and (min-width: 768px) {
   .nav__link {
-    padding-right: 2.25rem;
-    padding-bottom: 1rem;
-    -webkit-text-decoration: underline 0.15rem solid #FFFFFF;
-            text-decoration: underline 0.15rem solid #FFFFFF;
-    text-underline-offset: 2.1rem;
+    margin: 3 0 6rem 0;
+    display: flex;
+    align-items: flex-start;
   }
 }
 .nav__link :hover {
-  text-decoration: underline;
+  width: 100%;
+  padding-bottom: 1.25rem;
+  border-bottom: solid 0.25rem #fafafa;
+}
+@media screen and (min-width: 768px) {
+  .nav__link :hover {
+    padding-bottom: 2.8rem;
+    border-bottom: underline 0.15rem solid #fafafa;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 .nav__link :active {
-  text-decoration: underline;
-}
-.nav__link-url {
+  width: 100%;
+  padding-bottom: 1.25rem;
   color: #FFFFFF;
-  text-decoration: none;
+  border-bottom: solid 0.25rem #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .nav__link :active {
+    padding-bottom: 2.8rem;
+    border-bottom: underline 0.15rem solid #FFFFFF;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 body {
@@ -289,7 +327,7 @@ body {
 .about {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .about {
@@ -298,12 +336,17 @@ body {
 }
 .about__header {
   color: #323232;
+  padding: 0 0 1.75rem 0;
 }
 .about__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem 3rem 3rem 3rem;
+}
+@media screen and (min-width: 768px) {
+  .about__container {
+    padding: 1rem 3rem 3rem 3rem;
+  }
 }
 .about__image {
   -o-object-fit: contain;
@@ -313,7 +356,7 @@ body {
   padding: 1rem 0 0 0;
 }
 .about__subheader {
-  padding: 1.5rem 0 0 0;
+  padding: 2rem 0 0.25rem 0;
 }
 .about__more-info {
   display: flex;
@@ -327,7 +370,7 @@ body {
 }
 .about__content {
   font-size: 1.1rem;
-  padding: 1rem 0 0 0;
+  padding: 1.25rem 0 0 0;
   justify-content: space-between;
 }
 
@@ -342,6 +385,8 @@ body {
 }
 .gallery__header {
   padding-top: 1rem;
+  color: #323232;
+  padding: 1rem 0;
 }
 .gallery__photos {
   display: flex;
@@ -359,6 +404,7 @@ body {
 .gallery__photo {
   -o-object-fit: contain;
      object-fit: contain;
+  padding: 0.5rem 0;
 }
 @media screen and (min-width: 768px) {
   .gallery__photo {
