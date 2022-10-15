@@ -6,7 +6,7 @@
 .footer {
     background-color: $primary-black;
     color: $white;
-    padding: 1rem;
+    padding: 1.5rem;
 
     @include tablet {
         position: relative;
@@ -23,16 +23,14 @@
     }
 
     &__header {
-        font-size: 1.5rem;
-        font-weight: 600;
-        line-height: normal;
-        padding: 1rem 2rem 0 0;
+        padding: 1.75rem 2rem 0 0;
     }
 
     &__socials {
         display: flex;
         align-items: flex-end;
-        padding: 1rem 0;
+        width: 30%;
+        padding: 2.5rem 0 2rem 0;
 
         @include tablet {
             padding: 0;
@@ -40,16 +38,22 @@
     }
 
     &__social {
-        min-width: 3.25rem;
-        padding-right: 1.75rem;
+        width: 4.35rem;
+        padding-right: 2.3rem;
     }
 
-    &__social--resize {
-        min-width: auto;
-        min-height: 1.5rem;
+    &__social--twitter {
+        min-width: 4.65rem;
+    }
+
+    &__social--facebook {
+        min-width: 2rem;
+        max-width: 3.5rem;
+        max-height: 2.5rem;
     }
 
     &__credits {
+        font-size: 1.18rem;
         display: flex;
         flex-direction: column;
 
@@ -61,28 +65,28 @@
         }
     }
 
-    &__agent-info {
+    &__agent {
         display: flex;
         flex-direction: column;
-        padding-bottom: 1.5rem;
+         padding-bottom: 1rem;
     }
 
-    &__featured-info {
-        font-size: 1rem;
+    &__contact {
+        padding: 0 0 1.2rem 0;
+    }
+
+    &__featured {
         font-weight: 600;
-    }
-
-    &__info--bottom-line {
-        padding-bottom: 1rem;
+        letter-spacing: 0.05rem;
+        word-spacing: 0.1rem;
     }
 
     &__info {
-        font-size: 1rem;
-        font-weight: 400;
+        color: $mercury;
     }
 
     &__logo {
-        max-width: 12rem;
+        width: 10.5rem;
         padding-top: 3rem;
 
         @include tablet{
@@ -95,6 +99,7 @@
     }
 
     &__copyright {
+        font-size: 1rem;
         padding: 1rem 0 0 0;
         
         @include tablet {

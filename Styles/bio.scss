@@ -20,7 +20,7 @@ body {
 .about {
     display: flex;
     flex-direction: column;
-    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
 
     @include tablet {
         padding: 3rem;
@@ -28,7 +28,7 @@ body {
 
     &__header {
         color: $primary-black;
-        padding: 0 0 1.75rem 0;
+        padding: 0 0 1rem 0;
         }    
 
     &__container {
@@ -42,22 +42,28 @@ body {
     }
 
     &__image {
-        object-fit: contain;
+        object-fit: cover;
+        object-position: bottom;
+        height: 14rem;
+        width: 100%;
     }
 
-    &__quote, &__quote-by {
+    &__quote {
         padding: 1rem 0 0 0;
-
+        word-spacing: 0.2rem;
+        color: $primary-black;
     }
 
     &__subheader {
-        padding: 2rem 0 0.25rem 0;
+        padding: 2.5rem 0 0.25rem 0;
+        color: $hover-black;
     }
     
     &__more-info {
+        color: $primary-black;
         display: flex;
         flex-direction: column;
-
+        
         @include tablet {
             flex-direction: row;
             justify-content: flex-start;
@@ -65,7 +71,7 @@ body {
     }
 
     &__content {
-        font-size: 1.1rem;
+        font-size: 1.23rem;
         padding: 1.25rem 0 0 0;
         justify-content: space-between;
     }
@@ -73,7 +79,7 @@ body {
 
 .gallery {
     background-color: $alabaster;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
 
     @include tablet  {
         padding: 3rem;

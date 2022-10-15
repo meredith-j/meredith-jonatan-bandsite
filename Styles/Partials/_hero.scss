@@ -8,7 +8,7 @@ nicely for users with screens as small as 350px*/
     margin: 0;
     background-image: url(../../Assets/Images/hero-bio.jpg);
     background-size: cover;
-    background-position: bottom right;
+    background-position: right;
     background-repeat: no-repeat;
     position: relative;
     width: 100%;
@@ -26,8 +26,9 @@ nicely for users with screens as small as 350px*/
 
     &__heading {
         color: $white;
+        word-spacing: 0.5rem;
         position: absolute;
-        padding: 10rem 1rem;
+        padding: 10rem 1.5rem;
         z-index: 8;
 /*
         @include mobile {
