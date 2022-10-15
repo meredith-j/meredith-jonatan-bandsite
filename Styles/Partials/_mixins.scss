@@ -1,13 +1,5 @@
 @use './breakpoints' as *;
 
-/*mobile is only used on the hero in order for the
-image/opacity to scale neatly */
-@mixin mini {
-  @media screen and (min-width: $mini) {
-    @content;
-  }
-}
-
 @mixin mobile {
   @media screen and (min-width: $mobile) {
     @content;

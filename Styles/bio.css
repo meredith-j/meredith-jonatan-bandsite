@@ -1,6 +1,4 @@
 /*form fields error state*/
-/*mobile is only used on the hero in order for the
-image/opacity to scale neatly */
 @font-face {
   font-family: "Avenir";
   src: url(../../Assets/Fonts/AvenirNextLTPro-Regular.woff2) format("woff2");
@@ -177,47 +175,37 @@ button {
   }
 }
 
+/*mobile hero is matches the mockup at 617px by 1108px but will scale
+nicely for users with screens as small as 350px*/
 .hero {
   margin: 0;
   background-image: url(../../Assets/Images/hero-bio.jpg);
-  background-size: 100%;
-  background-position: auto;
+  background-size: cover;
+  background-position: bottom right;
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
-  height: 14rem;
+  min-height: 25rem;
   z-index: 1;
-  /*@include mini {
-      height: 20rem;
-  }
-
-  @include mobile {
-      height: 30rem;
-  } */
-}
-@media screen and (min-width: 550px) {
-  .hero {
-    height: 23rem;
-  }
 }
 .hero__filter {
   position: absolute;
-  background-size: auto;
+  background-size: inherit;
   background-color: #323232;
   opacity: 50%;
   width: 100%;
-  height: inherit;
+  height: 25rem;
 }
 .hero__heading {
   color: #FFFFFF;
   position: absolute;
-  padding: 15% 1rem;
+  padding: 10rem 1rem;
   z-index: 8;
-}
-@media screen and (min-width: 550px) {
-  .hero__heading {
-    padding: 25% 1rem;
-  }
+  /*
+          @include mobile {
+              padding: 25% 1rem;
+          }
+          */
 }
 
 .nav {

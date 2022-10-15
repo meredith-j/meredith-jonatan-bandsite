@@ -2,47 +2,38 @@
 @use './breakpoints' as *;
 @use './mixins' as *;
 
+/*mobile hero is matches the mockup at 617px by 1108px but will scale
+nicely for users with screens as small as 350px*/
 .hero {
     margin: 0;
     background-image: url(../../Assets/Images/hero-bio.jpg);
-    background-size: 100%;
-    background-position: auto;
+    background-size: cover;
+    background-position: bottom right;
     background-repeat: no-repeat;
     position: relative;
     width: 100%;
-    height: 14rem;
+    min-height: 25rem;
     z-index: 1;
-
-    @include mobile {
-        height: 23rem;
-    }
-
-    /*@include mini {
-        height: 20rem;
-    }
-
-    @include mobile {
-        height: 30rem;
-    } */
 
     &__filter {
         position: absolute;
-        background-size: auto;
+        background-size: inherit;
         background-color: $primary-black;
         opacity: 50%;
         width: 100%;
-        height: inherit;
+        height: 25rem;
     }
 
     &__heading {
         color: $white;
         position: absolute;
-        padding: 15% 1rem;
+        padding: 10rem 1rem;
         z-index: 8;
-
+/*
         @include mobile {
             padding: 25% 1rem;
         }
+        */
     }
     
 }
