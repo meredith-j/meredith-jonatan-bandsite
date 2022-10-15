@@ -286,8 +286,24 @@ nicely for users with screens as small as 350px*/
   color: #e1e1e1;
   text-decoration: none;
 }
+.nav__link-url--active {
+  color: #FFFFFF;
+}
+.nav__link--active {
+  color: #FFFFFF;
+  padding-bottom: 1.25rem;
+  border-bottom: solid 0.25rem #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .nav__link--active {
+    padding-bottom: 2.8rem;
+    border-bottom: underline 0.15rem solid #FFFFFF;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 .nav__link {
-  color: #e1e1e1;
   font-size: 1.75rem;
   text-align: center;
   width: 50%;
@@ -301,30 +317,13 @@ nicely for users with screens as small as 350px*/
     align-items: flex-start;
   }
 }
-.nav__link :hover {
+.nav__link--inactive :hover {
   color: #FFFFFF;
   width: 100%;
-  padding-bottom: 1.25rem;
   border-bottom: solid 0.25rem #FFFFFF;
 }
 @media screen and (min-width: 768px) {
-  .nav__link :hover {
-    padding-bottom: 2.8rem;
-    border-bottom: underline 0.15rem solid #FFFFFF;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-}
-.nav__link :active {
-  width: 100%;
-  padding-bottom: 1.25rem;
-  color: #FFFFFF;
-  border-bottom: solid 0.25rem #FFFFFF;
-}
-@media screen and (min-width: 768px) {
-  .nav__link :active {
-    padding-bottom: 2.8rem;
+  .nav__link--inactive :hover {
     border-bottom: underline 0.15rem solid #FFFFFF;
     width: -webkit-fit-content;
     width: -moz-fit-content;

@@ -44,10 +44,24 @@
         &__link-url {
             color: $mercury;
             text-decoration: none;
+
+            &--active {
+                color: $white;
+            }
         }
 
+        &__link--active {
+                color: $white;
+                padding-bottom: 1.25rem;
+                border-bottom: solid 0.25rem $white;
+                @include tablet {
+                    padding-bottom: 2.8rem;
+                    border-bottom: underline 0.15rem solid $white;
+                    width: fit-content;
+                }
+            }
+
         &__link {
-            color: $mercury;
             font-size: 1.75rem;
             text-align: center;
             width: 50%;
@@ -59,31 +73,19 @@
                 display: flex;
                 align-items: flex-start;
             }
+        }
 
+        &__link--inactive {
             :hover {
                 color: $white;
                 width: 100%;
-                padding-bottom: 1.25rem;
                 border-bottom: solid 0.25rem $white;
-
+                
                 @include tablet {
-                    padding-bottom: 2.8rem;
                     border-bottom: underline 0.15rem solid $white;
                     width: fit-content;
                 }
-            }    
-            :active {
-                width: 100%;
-                padding-bottom: 1.25rem;
-                color: $white;
-                border-bottom: solid 0.25rem $white;
 
-                @include tablet {
-                    padding-bottom: 2.8rem;
-                    border-bottom: underline 0.15rem solid $white;
-                    width: fit-content;
-                }
             }
-            
         }
     }
