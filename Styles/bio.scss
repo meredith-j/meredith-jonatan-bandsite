@@ -37,15 +37,19 @@ body {
         justify-content: center;
 
         @include tablet {
-        padding: 1rem 3rem 3rem 3rem;
+        padding: 1rem 4rem;
         }
     }
 
     &__image {
         object-fit: cover;
         object-position: bottom;
-        height: 14rem;
+        height: 15rem;
         width: 100%;
+
+        @include tablet {
+            height: 23rem;
+        }
     }
 
     &__quote {
