@@ -41,7 +41,7 @@ h1 {
     }
 }
 
-//section names
+//section headers
 h2 {
     font-size: 2rem;
     font-weight: 600;
@@ -52,11 +52,10 @@ h2 {
         font-weight: 600;
     }
 
-//    @include desktop {
-  //      font-size: ;
-    //    font-weight: ;
-      //  line-height: ;
-  //  }
+    @include desktop {
+        font-size: 3rem;
+        font-weight: 600;
+    }
 }
 
 //quote in About section
@@ -71,11 +70,11 @@ h3 {
         line-height: 2.75rem;
     }
 
-//    @include desktop {
-  //      font-size: ;
-    //    font-weight: ;
-      //  line-height: ;
-  //  }
+    @include desktop {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2.75rem;
+    }
 }
 
 //footer header
@@ -109,11 +108,11 @@ h5 {
         line-height: 2.75rem;
     }
 
-//    @include desktop {
-  //      font-size: ;
-    //    font-weight: ;
-      //  line-height: ;
-  //  }
+    @include desktop {
+        font-size: 1.85rem;
+        font-weight: 600;
+        line-height: 2.75rem;
+    }
 }
 
 

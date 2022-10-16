@@ -48,6 +48,12 @@ h2 {
     font-weight: 600;
   }
 }
+@media screen and (min-width: 1280px) {
+  h2 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
 
 h3 {
   font-size: 1.25rem;
@@ -57,6 +63,13 @@ h3 {
 @media screen and (min-width: 768px) {
   h3 {
     font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h3 {
+    font-size: 1.6rem;
     font-weight: 600;
     line-height: 2.75rem;
   }
@@ -83,6 +96,13 @@ h5 {
 @media screen and (min-width: 768px) {
   h5 {
     font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h5 {
+    font-size: 1.85rem;
     font-weight: 600;
     line-height: 2.75rem;
   }
@@ -307,6 +327,7 @@ nicely for users with screens as small as 350px*/
 }
 @media screen and (min-width: 1280px) {
   .hero__heading {
+    letter-spacing: 0.1rem;
     padding: 21.9rem 8.75rem;
   }
 }
@@ -437,6 +458,11 @@ body {
     padding: 3rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about {
+    padding: 4rem 8.75rem 3rem 8.75rem;
+  }
+}
 .about__header {
   color: #323232;
   padding: 0 0 1rem 0;
@@ -465,6 +491,14 @@ body {
     height: 24rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about__image {
+    -o-object-position: top;
+       object-position: top;
+    width: 100%;
+    height: 38.5rem;
+  }
+}
 .about__quote {
   padding: 2rem 0 0 0;
   word-spacing: 0.2rem;
@@ -474,6 +508,11 @@ body {
   .about__quote {
     word-spacing: 0.25rem;
     line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__quote {
+    width: 80%;
   }
 }
 .about__quote-author {
@@ -522,6 +561,11 @@ body {
 @media screen and (min-width: 768px) {
   .gallery {
     padding: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery {
+    padding: 3rem 8.75rem;
   }
 }
 .gallery__header {
