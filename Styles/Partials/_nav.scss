@@ -17,7 +17,7 @@
 
         @include tablet {
             justify-content: flex-start;
-            padding: 3rem 4rem;
+            padding: 2rem 2rem 2rem 3rem;
         }
         @include desktop {
             justify-content: flex-start;
@@ -25,6 +25,7 @@
         }
     }
         &__logo {
+            color: $mercury;
             width: 10rem;
             @include tablet {
                 width: 13rem;
@@ -52,11 +53,12 @@
 
         &__link--active {
                 color: $white;
-                padding-bottom: 1.25rem;
+                padding: 0 0 1.25rem 0;
                 border-bottom: solid 0.25rem $white;
 
                 @include tablet {
-                    padding-bottom: 2.8rem;
+                    font-weight: 600;
+                    padding: 0 0 2.1rem 0;
                     border-bottom: underline 0.15rem solid $white;
                     width: fit-content;
                 }
@@ -70,7 +72,7 @@
             justify-content: space-evenly;
 
             @include tablet {
-                margin: 0 0 0 2rem;
+                margin: 0 0 0 4.5rem;
                 width: 100%;
                 display: flex;
                 align-items: flex-start;

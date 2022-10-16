@@ -24,6 +24,11 @@
 
     &__header {
         padding: 1.75rem 2rem 0 0;
+
+        @include tablet {
+            word-spacing: 0.4rem;
+            letter-spacing: 0.1rem;
+        }
     }
 
     &__socials {
@@ -53,22 +58,29 @@
     }
 
     &__credits {
-        font-size: 1.18rem;
         display: flex;
         flex-direction: column;
 
         @include tablet {
-            padding: 1rem 0 0 0;
+            padding: 5rem 0 0 0;
             flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
         }
     }
 
     &__agent {
         display: flex;
         flex-direction: column;
-         padding-bottom: 1rem;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            padding: 0 3.5rem 0 0;
+        }
+    }   
+
+    &__agent--no-padding {
+        @include tablet{
+            padding: 0;
+        }
     }
 
     &__contact {
@@ -76,25 +88,40 @@
     }
 
     &__featured {
+        color: $mercury;
         font-weight: 600;
         letter-spacing: 0.05rem;
         word-spacing: 0.1rem;
+
+        @include tablet {
+            font-size: 1.12rem;
+            letter-spacing: 0;
+            word-spacing: 0;
+            line-height: 1.8rem;
+        }
     }
 
     &__info {
         color: $mercury;
+
+        @include tablet {
+            font-size: 1.12rem;
+            line-height: 1.8rem;
+            word-break: break-word;
+        }
     }
 
     &__logo {
-        width: 10.5rem;
-        padding-top: 3rem;
+        min-width: 12rem;
+        height: 4rem;
+        padding-top: 3.2rem;
 
         @include tablet{
             padding: 0;
             position: absolute;
-            top: 3.25rem;
-            right: 2rem;
-            height: 1.25rem;
+            top: 4.7rem;
+            right: 2.1rem;
+            height: 1.8rem;
         }
     }
 
@@ -103,7 +130,8 @@
         padding: 1rem 0 0 0;
         
         @include tablet {
-            padding: 3rem 0 0 0;
+            font-size: 1.2rem;
+            padding: 3rem 0 1rem 0;
         }
     }
 }

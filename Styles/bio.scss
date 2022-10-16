@@ -48,7 +48,8 @@ body {
         width: 100%;
 
         @include tablet {
-            height: 23rem;
+            width: 100%;
+            height: 24rem;
         }
     }
 
@@ -70,7 +71,7 @@ body {
 
         @include tablet {
             padding: 0.5rem 0 0 0;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
     }
 
@@ -95,7 +96,9 @@ body {
         padding: 1.25rem 0 0 0;
 
         @include tablet {
-            font-size: 1rem;
+            font-size: 1.04rem;
+            word-spacing: 0.05rem;
+            line-height: 1.7rem;
             width: 48%;
         }
     }
@@ -106,55 +109,41 @@ body {
     padding: 1rem 1.5rem;
 
     @include tablet  {
-        padding: 3rem 1rem;
+        padding: 3rem 1.5rem;
     }
 
     &__header {
         padding: 1rem 0 1rem 0.5rem;
         color: $primary-black;
+
+        @include tablet {
+            padding:  1rem 0 2.5rem 0;
+        }
     }
 
     &__photos {
         display: flex;
         flex-direction: column;
-        object-fit: contain;
 
         @include tablet {
-            height: 30rem;
+            height: 33rem;
+//            max-height: 35rem;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
-            align-content: space-between;
+            align-content: space-between; 
+
         }
     }
 
     &__photo {
         object-fit: contain;
-        padding: 0.5rem 0;
+        padding: 0.75rem 0 0 0;
 
         @include tablet {
-            width: 33.3%;
-            height: 30%;
+            width: 33%;
+            height: 10rem;
             padding: 0;
         }
     }
-
-/*    &__photo:nth-child(3n) {
-        @include tablet {
-            padding: 0 0rem 1rem 0;
-        }
-    }
-
-    &__photo:nth-child(n+7) {
-        @include tablet {
-            padding: 0 1rem 0 0;
-        }
-    }
-
-&__photo:nth-child(9) {
-    @include tablet {
-        padding: 0;
-        }
-    }
- */
 }
