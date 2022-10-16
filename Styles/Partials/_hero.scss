@@ -20,11 +20,12 @@ nicely for users with screens as small as 350px*/
     }
 
     @include desktop {
-        min-height: 40rem;
+        background-position: top right;
+        min-height: 48rem;
     }
 
 /* style guide says opacity should be set at 50% but doesn't match
-the style guide - not sure if this is just my computer but the colours
+the mock up - not sure if this is just my computer but the colours
 were way too dull at 50% compared to the mock up */
     &__filter {
         position: absolute;
@@ -38,6 +39,10 @@ were way too dull at 50% compared to the mock up */
             min-height: 32rem;
         }
 
+        @include desktop {
+            min-height: 48rem;
+        }
+
     }
 
     &__heading {
@@ -48,9 +53,12 @@ were way too dull at 50% compared to the mock up */
         z-index: 8;
 
         @include tablet {
-            padding: 15rem 2.7rem;
+            padding: 15rem 3rem;
         }
         
+        @include desktop {
+            padding: 21.9rem 8.75rem;
+        }
     }
     
 }
