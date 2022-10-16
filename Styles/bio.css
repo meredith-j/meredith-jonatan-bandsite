@@ -96,7 +96,7 @@ h4 {
 }
 @media screen and (min-width: 1280px) {
   h4 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: 600;
     line-height: 2.75rem;
   }
@@ -192,6 +192,11 @@ button {
     letter-spacing: 0.05rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__header {
+    padding: 1.75rem 3.5rem 0 0;
+  }
+}
 .footer__socials {
   display: flex;
   align-items: center;
@@ -217,12 +222,23 @@ button {
     height: 2.05rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__social {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+}
 .footer__social--twitter {
   width: 2.5rem;
 }
 @media screen and (min-width: 768px) {
   .footer__social--twitter {
     width: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__social--twitter {
+    width: 2.3rem;
   }
 }
 .footer__social--facebook {
@@ -233,6 +249,12 @@ button {
   .footer__social--facebook {
     width: 3rem;
     height: 1.99rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__social--facebook {
+    width: 2.8rem;
+    height: 1.9rem;
   }
 }
 .footer__credits {
@@ -247,6 +269,12 @@ button {
          column-gap: 4rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__credits {
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
+  }
+}
 .footer__agent {
   display: flex;
   flex-direction: column;
@@ -255,6 +283,11 @@ button {
 @media screen and (min-width: 768px) {
   .footer__agent--last {
     padding: 0 0 0 2.1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__agent--last {
+    padding: 0 0 0 2.5rem;
   }
 }
 .footer__contact {
@@ -272,6 +305,11 @@ button {
     letter-spacing: auto;
     word-spacing: 0;
     line-height: 1.6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__featured {
+    font-size: 1rem;
   }
 }
 .footer__info {
@@ -301,7 +339,9 @@ button {
 }
 @media screen and (min-width: 1280px) {
   .footer__logo {
-    top: 5rem;
+    width: 9rem;
+    height: auto;
+    top: 5.5rem;
     right: 8.75rem;
   }
 }
@@ -313,6 +353,11 @@ button {
   .footer__copyright {
     font-size: 1.15rem;
     padding: 3rem 0 1rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__copyright {
+    font-size: 1.1rem;
   }
 }
 
@@ -635,6 +680,7 @@ body {
   .about__content {
     font-size: 1rem;
     word-spacing: 0rem;
+    line-height: 1.6rem;
   }
 }
 
@@ -670,7 +716,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    row-gap: 2rem;
+    row-gap: 1.5rem;
   }
 }
 .gallery__photo {
@@ -680,7 +726,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .gallery__photo {
-    width: 31.5%;
+    width: 32%;
     padding: 0;
   }
 }/*# sourceMappingURL=bio.css.map */

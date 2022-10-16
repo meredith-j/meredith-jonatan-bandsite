@@ -138,6 +138,7 @@ body {
         @include desktop {
             font-size: 1rem;
             word-spacing: 0rem;
+            line-height: 1.6rem;
         }
     }
 }
@@ -168,12 +169,10 @@ body {
         flex-direction: column;
 
         @include tablet {
-//            height: 33rem;
-//            max-height: 35rem;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
-            row-gap: 2rem;
+            row-gap: 1.5rem;
         }
     }
 
@@ -182,7 +181,7 @@ body {
         padding: 0.75rem 0 0 0;
 
         @include tablet {
-            width: 31.5%;
+            width: 32%;
             padding: 0;
         }
     }
