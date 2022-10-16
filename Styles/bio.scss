@@ -21,6 +21,9 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2rem 1.5rem 1.5rem 1.5rem;
+    border-left: solid $alabaster;
+    border-right: solid $alabaster;
+    border-width: 0.2rem;
 
     @include tablet {
         padding: 4.25rem 3.25rem;
@@ -157,6 +160,9 @@ body {
 .gallery {
     background-color: $alabaster;
     padding: 1rem;
+    border-left: solid $alabaster;
+    border-right: solid $alabaster;
+    border-width: 0.2rem;
 
     @include tablet  {
         padding: 3rem 3.25rem;

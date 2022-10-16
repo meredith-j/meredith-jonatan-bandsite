@@ -98,6 +98,12 @@
                     width: fit-content;
                 }
 
+                @include tablet {
+                    padding: 0 0 3.37rem 0;
+                    border-bottom: underline 0.15rem solid $white;
+                    width: fit-content;
+                }
+
             }
         }
     }
