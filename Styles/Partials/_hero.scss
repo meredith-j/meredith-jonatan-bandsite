@@ -16,13 +16,14 @@ nicely for users with screens as small as 350px*/
     z-index: 1;
 
     @include tablet {
-        min-height: 32rem;
+        background-position: bottom right;
+        min-height: 36rem;
     }
 
 /* no matter what screen size between 1280 and 1980, the bee will always
 be visible in the desktop, even as the image crops at certain screen sizes */
     @include desktop {
-        background-position: top right;
+        background-position: right;
         min-height: 48rem;
     }
 
@@ -38,7 +39,7 @@ were way too dull at 50% compared to the mock up */
         height: 25rem;
 
         @include tablet {
-            min-height: 32rem;
+            min-height: 36rem;
         }
 
         @include desktop {
@@ -55,7 +56,8 @@ were way too dull at 50% compared to the mock up */
         z-index: 8;
 
         @include tablet {
-            padding: 15rem 3rem;
+            padding: 14.5rem 3.25rem;
+            word-spacing: 0.75rem;
         }
         
         @include desktop {
