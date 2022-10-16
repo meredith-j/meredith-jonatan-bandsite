@@ -16,7 +16,9 @@ tablet px range */
     }
   }
   
-  /* */
+/* matches mock up exactly at 1447px, however
+will scale nicely to any size within the
+tablet px range */
   @mixin desktop {
     @media screen and (min-width: $desktop) {
       @content;

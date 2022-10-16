@@ -23,7 +23,7 @@ nicely for users with screens as small as 350px*/
 /* no matter what screen size between 1280 and 1980, the bee will always
 be visible in the desktop, even as the image crops at certain screen sizes */
     @include desktop {
-        background-position: right;
+        background-position: top right;
         min-height: 48rem;
     }
 
@@ -61,8 +61,9 @@ were way too dull at 50% compared to the mock up */
         }
         
         @include desktop {
-            letter-spacing: 0.1rem;
-            padding: 21.9rem 8.75rem;
+            letter-spacing: 0;
+            padding: 23rem 8.76rem;
+            word-spacing: 0;
         }
     }
     

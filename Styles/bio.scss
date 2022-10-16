@@ -47,6 +47,10 @@ body {
         @include tablet {
         padding: 1rem 5rem;
         }
+
+        @include desktop {
+            padding: 1rem 5rem 0 5rem;
+        }
     }
 
     &__image {
@@ -79,6 +83,7 @@ body {
 
         @include desktop {
             width: 80%;
+            word-spacing: 0.2rem;
         }
     }
 
@@ -90,6 +95,11 @@ body {
         @include tablet {
             padding: 1rem 0 0 0;
             font-size: 1.35rem;
+        }
+
+        @include desktop {
+            font-size: 1.2rem;
+            word-spacing: 0rem;
         }
     }
 
@@ -108,6 +118,11 @@ body {
             justify-content: space-between;
             column-gap: 0.2rem;
         }
+
+        @include desktop {
+            justify-content: unset;
+            column-gap: 3.5rem;
+        }
     }
 
     &__content {
@@ -118,6 +133,11 @@ body {
             word-spacing: 0.05rem;
             line-height: 1.7rem;
             width: 48%;
+        }
+
+        @include desktop {
+            font-size: 1rem;
+            word-spacing: 0rem;
         }
     }
 }
