@@ -258,6 +258,8 @@ nicely for users with screens as small as 350px*/
   width: 100%;
   min-height: 25rem;
   z-index: 1;
+  /* no matter what screen size between 1280 and 1980, the bee will always
+  be visible in the desktop, even as the image crops at certain screen sizes */
   /* style guide says opacity should be set at 50% but doesn't match
   the mock up - not sure if this is just my computer but the colours
   were way too dull at 50% compared to the mock up */
@@ -330,6 +332,7 @@ nicely for users with screens as small as 350px*/
 }
 @media screen and (min-width: 1280px) {
   .nav__home {
+    padding: 3.5rem 2rem 3.5rem 8.75rem;
     justify-content: flex-start;
     padding: auto;
   }
@@ -377,6 +380,11 @@ nicely for users with screens as small as 350px*/
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav__link--active {
+    padding: 0 0 3.4rem 0;
   }
 }
 .nav__link {

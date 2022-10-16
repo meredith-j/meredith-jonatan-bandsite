@@ -19,6 +19,8 @@ nicely for users with screens as small as 350px*/
         min-height: 32rem;
     }
 
+/* no matter what screen size between 1280 and 1980, the bee will always
+be visible in the desktop, even as the image crops at certain screen sizes */
     @include desktop {
         background-position: top right;
         min-height: 48rem;

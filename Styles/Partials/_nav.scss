@@ -20,6 +20,7 @@
             padding: 2.5rem 2rem 2.5rem 3rem;
         }
         @include desktop {
+            padding: 3.5rem 2rem 3.5rem 8.75rem;
             justify-content: flex-start;
             padding: auto;
         }
@@ -63,6 +64,10 @@
                     padding: 0 0 2.7rem 0;
                     border-bottom: underline 0.15rem solid $white;
                     width: fit-content;
+                }
+
+                @include desktop {
+                padding: 0 0 3.4rem 0;
                 }
             }
 
