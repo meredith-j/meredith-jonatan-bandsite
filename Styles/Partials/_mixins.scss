@@ -1,6 +1,8 @@
 @use './breakpoints' as *;
 
-/* */
+/* matches mock up exactly at 492px, however
+will scale nicely to any size within the
+tablet px range */
 @mixin mobile {
   @media screen and (min-width: $mobile) {
     @content;
