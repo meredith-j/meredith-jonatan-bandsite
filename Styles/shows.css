@@ -1,0 +1,556 @@
+/*form fields error state*/
+/* matches mock up exactly at 488px, however
+will scale nicely to any size within the
+tablet px range */
+/* matches mock up exactly at 1056px, however
+will scale nicely to any size within the
+tablet px range */
+/* matches mock up exactly at 1447px, however
+will scale nicely to any size within the
+tablet px range */
+@font-face {
+  font-family: "Avenir";
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Regular.woff2) format("woff2");
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Regular.woff) format("woff"); /*just in case woff2 isn't compatible*/
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Demi.woff2) format("woff2");
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Demi.woff) format("woff"); /*just in case woff2 isn't compatible*/
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Bold.woff2) format("woff2");
+  src: url(../../Assets/Fonts/AvenirNextLTPro-Bold.woff) format("woff"); /*just in case woff2 isn't compatible*/
+  font-weight: 700;
+}
+h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 4.35rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 4.4rem;
+    font-weight: 600;
+    line-height: 4.25rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 3.25rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h2 {
+    font-size: 2.68rem;
+    font-weight: 600;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.72rem;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.83rem;
+    font-weight: 600;
+    line-height: 2.85rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+  }
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+}
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 2.9rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h4 {
+    font-size: 2.7rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+  }
+}
+
+h5 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+}
+@media screen and (min-width: 768px) {
+  h5 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h5 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+  }
+}
+
+p {
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.65rem;
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+  }
+}
+
+/*not used yet - assuming i will need it for
+sprint 2 */
+button {
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  button {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+  }
+}
+
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    position: relative;
+    padding: 3rem 3.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding: 3rem 8.75rem;
+  }
+}
+.footer__find-us {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__find-us {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+.footer__header {
+  padding: 1.75rem 3rem 0 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__header {
+    word-spacing: 0.05rem;
+    letter-spacing: 0.05rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__header {
+    padding: 1.75rem 3.5rem 0 0;
+  }
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  padding: 2.5rem 0 2rem 0;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__socials {
+    padding: 0;
+    -moz-column-gap: 1.45rem;
+         column-gap: 1.45rem;
+  }
+}
+.footer__social {
+  width: 2rem;
+  height: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__social {
+    width: 2.05rem;
+    height: 2.05rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__social {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+}
+.footer__social--twitter {
+  width: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__social--twitter {
+    width: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__social--twitter {
+    width: 2.3rem;
+  }
+}
+.footer__social--facebook {
+  width: 2.5rem;
+  height: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__social--facebook {
+    width: 3rem;
+    height: 1.99rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__social--facebook {
+    width: 2.8rem;
+    height: 1.9rem;
+  }
+}
+.footer__credits {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__credits {
+    padding: 5rem 0 0 0;
+    flex-direction: row;
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__credits {
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
+  }
+}
+.footer__agent {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__agent--last {
+    padding: 0 0 0 2.1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__agent--last {
+    padding: 0 0 0 2.5rem;
+  }
+}
+.footer__contact {
+  padding: 0 0 1.2rem 0;
+}
+.footer__featured {
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  word-spacing: 0.1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__featured {
+    font-size: 1.08rem;
+    letter-spacing: auto;
+    word-spacing: 0;
+    line-height: 1.6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__featured {
+    font-size: 1rem;
+  }
+}
+.footer__info {
+  color: #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .footer__info {
+    font-size: 1.08rem;
+    line-height: 1.8rem;
+    word-break: break-word;
+  }
+}
+.footer__logo {
+  width: 9.5rem;
+  height: 5.5rem;
+  padding: 3.2rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    padding: 0;
+    position: absolute;
+    top: 5.25rem;
+    right: 3rem;
+    height: 1.8rem;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logo {
+    width: 9rem;
+    height: auto;
+    top: 5.5rem;
+    right: 8.75rem;
+  }
+}
+.footer__copyright {
+  font-size: 1rem;
+  padding: 1rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    font-size: 1.15rem;
+    padding: 3rem 0 1rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__copyright {
+    font-size: 1.1rem;
+  }
+}
+
+.nav {
+  background-color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
+.nav__home {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .nav__home {
+    justify-content: flex-start;
+    padding: 2.5rem 2rem 2.5rem 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav__home {
+    padding: 3.5rem 2rem 3.5rem 8.75rem;
+    justify-content: flex-start;
+    padding: auto;
+  }
+}
+.nav__logo {
+  color: #e1e1e1;
+  width: 13rem;
+  height: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    width: 13rem;
+    height: 2rem;
+  }
+}
+.nav__links {
+  color: #e1e1e1;
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+.nav__link-url {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+.nav__link-url--active {
+  color: #FFFFFF;
+}
+.nav__link--active {
+  color: #FFFFFF;
+  padding: 0 0 1.25rem 0;
+  border-bottom: solid 0.25rem #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .nav__link--active {
+    font-weight: 600;
+    padding: 0 0 2.7rem 0;
+    border-bottom: underline 0.15rem solid #FFFFFF;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav__link--active {
+    padding: 0 0 3.4rem 0;
+  }
+}
+.nav__link {
+  font-size: 1.2rem;
+  text-align: center;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 768px) {
+  .nav__link {
+    margin: 0 0 0 4.5rem;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+.nav__link--inactive :hover {
+  color: #FFFFFF;
+  width: 100%;
+  border-bottom: solid 0.25rem #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .nav__link--inactive :hover {
+    padding: 0 0 2.8rem 0;
+    border-bottom: underline 0.15rem solid #FFFFFF;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav__link--inactive :hover {
+    padding: 0 0 3.37rem 0;
+    border-bottom: underline 0.15rem solid #FFFFFF;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+body {
+  font-family: "Avenir";
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.hero {
+  margin: 0;
+  background-image: url(../assets/images/hero-shows.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  min-height: 38rem;
+  z-index: 1;
+  /* no matter what screen size between 1280 and 1980, the bee will always
+  be visible in the desktop, even as the image crops at certain screen sizes */
+  /* style guide says opacity should be set at 50% but doesn't match
+  the mock up - not sure if this is just my computer but the colours
+  were way too dull at 50% compared to the mock up */
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-position: bottom right;
+    min-height: 36rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    background-position: top right;
+    min-height: 48rem;
+  }
+}
+.hero__filter {
+  position: absolute;
+  background-size: inherit;
+  background-color: #323232;
+  opacity: 33%;
+  width: 100%;
+  height: 38rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__filter {
+    min-height: 36rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__filter {
+    min-height: 48rem;
+  }
+}
+.hero__heading {
+  color: #FFFFFF;
+  word-spacing: 0.5rem;
+  position: absolute;
+  padding: 8.5rem 2rem;
+  z-index: 8;
+}
+@media screen and (min-width: 768px) {
+  .hero__heading {
+    padding: 14.5rem 3.25rem;
+    word-spacing: 0.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__heading {
+    letter-spacing: 0;
+    padding: 23rem 8.76rem;
+    word-spacing: 0;
+  }
+}/*# sourceMappingURL=shows.css.map */
