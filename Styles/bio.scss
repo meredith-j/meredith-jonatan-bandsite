@@ -173,7 +173,7 @@ body {
     }
 
     &__header {
-        padding: 1rem 0 1rem 0;
+        padding: 1rem 0;
         color: $primary-black;
 
         @include tablet {
@@ -202,4 +202,22 @@ body {
             padding: 0;
         }
     }
+}
+
+.comments {
+    padding: 2rem 1rem;
+
+    @include tablet  {
+        padding: 3rem 3.25rem;
+    }
+
+    @include desktop {
+        padding: 3rem 8.75rem;
+    }
+
+    &__heading {
+        color: $primary-black;
+    }
+
+    
 }
