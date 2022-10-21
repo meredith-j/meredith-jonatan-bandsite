@@ -35,7 +35,7 @@ let comments = [
 const commentListEl = document.querySelector('.forum__container');
 
 //tells JS to add entire list of comments to HTML
-for (let i = 0; i < comments.length; i++) {
+for (let i = 0; i < 3; i++) {
   const commentItem = comments[i];
   console.log(commentItem);
   generateCommentCard(commentItem);
@@ -92,3 +92,28 @@ function generateCommentCard(person) {
     commentContentEl.innerText = person.commentContent;
     commentDiv.appendChild(commentContentEl);
 }
+
+
+//target element for comment form
+const commentForm = document.getElementById("newComment");
+
+// create event listener
+commentForm.addEventListener("submit", (event) => {
+    // handle the event - prevent page from reloading
+    event.preventDefault();
+
+    // create event objects
+    const name = event.target.name.value;
+    const comment = event.target.comment.value;
+
+
+
+    console.log("name", name);
+    console.log("comment", comment);
+})
+
+let newComments = comments.map((value, index, array) => {
+    
+})
+
+// const newComments = comments.push()

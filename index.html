@@ -77,7 +77,7 @@
         <section class="forum">
             <h2 class="forum__heading">Join the Conversation</h2>
 
-            <form id="newComment" class="newComment">
+            <form id="newComment" class="comment__form">
                 <img class="newCommentImage" src="./assets/images/Mohan-muruge.jpg" alt="your profile image">
                 
                 <div>
@@ -86,7 +86,11 @@
                 </div>
 
                 <div>
-                    <label>Comment</label>
+                    <input id="date" type="hidden" name="date" value="" />
+                </div>
+
+                <div>
+                    <label for="comment">Comment</label>
                     <input id="comment" placeholder="Add a new comment" type="textarea" name="comment" />
                 </div>
 
