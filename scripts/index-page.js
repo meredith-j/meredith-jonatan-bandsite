@@ -94,11 +94,11 @@ function generateCommentCard(person) {
 }
 
 //create function for new comment to be added to array
-function addComment (userName, comment) {
+function addComment (userName, newDate, comment) {
 
     const newComment =
         {userName: userName,
-        commentDate: 'date',
+        commentDate: newDate,
         commentContent: comment,
         }
         
@@ -116,7 +116,15 @@ commentForm.addEventListener("submit", (event) => {
     let name = event.target.name.value
     let comment = event.target.name.value
 
-    addComment(name, comment);
+    
+    let date = new Date()
+    let day = date.getDate();
+    let month = date.getMonth()+1;
+    let year = date.getFullYear();
+
+    let newDate = `${day}/${month}/${year}.`;
+
+    addComment(name, newDate, comment);
 
     //removing .forum__container
     commentListEl.innerHTML = '';
