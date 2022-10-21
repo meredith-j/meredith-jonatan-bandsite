@@ -204,7 +204,7 @@ body {
     }
 }
 
-.comments {
+.forum {
     padding: 2rem 1rem;
 
     @include tablet  {
@@ -219,5 +219,21 @@ body {
         color: $primary-black;
     }
 
-    
+/*    &__container {
+        background-color: navy;
+
+        :nth-child(2n + 4){
+            background-color: aquamarine;
+        }
+*/
+
+}
+
+.comment {
+    &__image {
+        background-color: $mercury;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 1rem;
+    }
 }

@@ -10,7 +10,7 @@ it again.
 }; */
 
 
-
+// array of objects - each object contains the user, date and content of the comment
 let comments = [
     {
         userName: "Connor Walton",
@@ -41,6 +41,7 @@ for (let i = 0; i < comments.length; i++) {
   generateCommentCard(commentItem);
 }
 
+//creating tags & classes for new HTML elements
 function generateCommentCard(person) {
 
     // <article class="forum__comment">
@@ -48,26 +49,46 @@ function generateCommentCard(person) {
     articleEl.classList.add('forum__comment');
     commentListEl.appendChild(articleEl);
 
+    // div: container for image
+    const imageDiv = document.createElement('div');
+    imageDiv.classList.add('forum__image');
+    articleEl.appendChild(imageDiv);
+
     // add commenter profile photos - currently just a gray circle
     const imageEl = document.createElement('div');
     imageEl.classList.add('comment__image');
     //  don't need this line for now - maybe if we get images 
     //  imageEl.src = person.image.url;
+
+    //alt text for images
     imageEl.setAttribute('alt', person.userName);
-    articleEl.appendChild(imageEl);
+    imageDiv.appendChild(imageEl);
+
+    // div: container for commenter's name & date
+    const nameDateDiv = document.createElement('div');
+    nameDateDiv.classList.add('comment__name-date');
+    articleEl.appendChild(nameDateDiv);
 
     //commenter name
     const commenterNameEl = document.createElement('p');
+    commenterNameEl.classList.add('comment__user')
     commenterNameEl.innerText = person.userName;
-    articleEl.appendChild(commenterNameEl);
+    nameDateDiv.appendChild(commenterNameEl);
 
     //comment date
     const commenterDateEl = document.createElement('p');
+    commenterDateEl.classList.add('comment__date')
     commenterDateEl.innerText = person.commentDate;
-    articleEl.appendChild(commenterDateEl);
+    nameDateDiv.appendChild(commenterDateEl);
+
+    // div: container for comment
+    const commentDiv = document.createElement('div');
+    commentDiv.classList.add('comment__comment');
+    articleEl.appendChild(commentDiv);
 
     //comment content
     const commentContentEl = document.createElement('p');
+    commentContentEl.classList.add('comment__content');
     commentContentEl.innerText = person.commentContent;
-    articleEl.appendChild(commentContentEl);
+    commentDiv.appendChild(commentContentEl);
 }

@@ -76,6 +76,25 @@
 
         <section class="forum">
             <h2 class="forum__heading">Join the Conversation</h2>
+
+            <form id="newComment" class="newComment">
+                <img class="newCommentImage" src="./assets/images/Mohan-muruge.jpg" alt="your profile image">
+                
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" placeholder="Enter your name" type="text" name="name" />
+                </div>
+
+                <div>
+                    <label>Comment</label>
+                    <input id="comment" placeholder="Add a new comment" type="textarea" name="comment" />
+                </div>
+
+                <div>
+                    <button class="form__submit">Comment</button>
+                </div>
+            </form>
+
             <div class="forum__container">
                 <!-- comments by users generated here using JS -->
             </div>

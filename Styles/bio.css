@@ -760,19 +760,33 @@ body {
   }
 }
 
-.comments {
+.forum {
   padding: 2rem 1rem;
+  /*    &__container {
+          background-color: navy;
+
+          :nth-child(2n + 4){
+              background-color: aquamarine;
+          }
+  */
 }
 @media screen and (min-width: 768px) {
-  .comments {
+  .forum {
     padding: 3rem 3.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .comments {
+  .forum {
     padding: 3rem 8.75rem;
   }
 }
-.comments__heading {
+.forum__heading {
   color: #323232;
+}
+
+.comment__image {
+  background-color: #e1e1e1;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 1rem;
 }/*# sourceMappingURL=bio.css.map */
