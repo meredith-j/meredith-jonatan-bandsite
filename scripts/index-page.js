@@ -35,7 +35,7 @@ let comments = [
 const commentListEl = document.querySelector('.forum__container');
 
 //tells JS to add entire list of comments to HTML
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < comments.length; i++) {
   const commentItem = comments[i];
   console.log(commentItem);
   generateCommentCard(commentItem);
@@ -93,6 +93,17 @@ function generateCommentCard(person) {
     commentDiv.appendChild(commentContentEl);
 }
 
+//create function for new comment to be added to array
+function addComment (userName, comment) {
+
+    const newComment =
+        {userName: userName,
+        commentDate: 'date',
+        commentContent: comment,
+        }
+        
+    comments.unshift(newComment);
+}
 
 //target element for comment form
 const commentForm = document.getElementById("newComment");
@@ -102,18 +113,19 @@ commentForm.addEventListener("submit", (event) => {
     // handle the event - prevent page from reloading
     event.preventDefault();
 
-    // create event objects
-    const name = event.target.name.value;
-    const comment = event.target.comment.value;
+    let name = event.target.name.value
+    let comment = event.target.name.value
 
+    addComment(name, comment);
 
+    //removing .forum__container
+    commentListEl.innerHTML = '';
 
-    console.log("name", name);
-    console.log("comment", comment);
+    for (let i = 0; i < comments.length; i++) {
+        const commentItem = comments[i];
+        console.log(commentItem);
+        generateCommentCard(commentItem);
+      }
+
+    console.log(newComment);
 })
-
-let newComments = comments.map((value, index, array) => {
-    
-})
-
-// const newComments = comments.push()
