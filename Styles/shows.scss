@@ -18,11 +18,12 @@ body {
 
 .shows {
     color: $primary-black;
-    padding: 2rem 2rem;
+    padding: 4rem 0 2rem 0;
 
     @include tablet {
         display: flex;
         flex-direction: column;
+        padding: 4rem 2rem 2rem 2rem;
     }
 
     @include desktop {
@@ -31,9 +32,10 @@ body {
     }
 
     &__title {
+        padding: 0 2rem 2rem 2rem;
 
         @include tablet {
-            padding: 0 0 1rem 0;
+            padding: 0 0 5rem 0;
         }
 
         @include desktop {
@@ -49,17 +51,23 @@ body {
         :hover {
             background-color: $alabaster;
         }
-        
+
         @include desktop {
             width: 70%;
+            padding: 1.5rem 0 0 0;
         }
     }
 
     &__event {
-        padding: 1rem 0;
+        padding: 1rem 2rem;
         border-bottom: 0.1rem solid $silver;
 
+        &--clicked {
+            background-color: $mercury;
+        }
+
         @include tablet {
+            padding: 1rem 1.5rem;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -78,24 +86,45 @@ body {
         @include tablet {
             display: none;
         }
+
+        &--tablet {
+            display: none;
+
+            @include tablet {
+            color: $silver;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            display: flex;
+            padding: 0 1.5rem;
+            }
+        }
+        
     }
 
-    &__date {
-        font-size: 1.4rem;
-        font-weight: 600;
+    &__tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 13rem;
+
+        @include desktop {
+            gap: 10rem;
+        }
     }
 
-    &__venue {
-        font-size: 1.4rem;
-    }
-     
-    &__city {
+
+    &__info {
         font-size: 1.4rem;
         padding: 0 0 1.5rem 0;
 
         @include tablet {
             padding: 0;
         }
+    }
+
+    &__featured {
+        font-size: 1.4rem;
+        font-weight: 600;
     }
 
     &__tickets {
@@ -111,7 +140,7 @@ body {
         pointer-events: none;
 
         @include tablet {
-            width: auto;
+            width: 13rem;
         }
     }
 }

@@ -62,7 +62,7 @@ function generateCommentCard(show) {
 
     //generating show dates
     const showDate = document.createElement('p');
-    showDate.classList.add('shows__date');
+    showDate.classList.add('shows__featured');
     showDate.innerText = show.date
     articleEl.appendChild(showDate);
 
@@ -74,7 +74,7 @@ function generateCommentCard(show) {
 
     //generating show venues
     const showVenue = document.createElement('p');
-    showVenue.classList.add('shows__venue');
+    showVenue.classList.add('shows__info');
     showVenue.innerText = show.venue;
     articleEl.appendChild(showVenue);
 
@@ -86,7 +86,7 @@ function generateCommentCard(show) {
 
     //generating show cities
     const showCity = document.createElement('p');
-    showCity.classList.add('shows__city');
+    showCity.classList.add('shows__info');
     showCity.innerText = show.location;
     articleEl.appendChild(showCity);
 

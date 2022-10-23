@@ -709,12 +709,13 @@ body {
 
 .shows {
   color: #323232;
-  padding: 2rem 2rem;
+  padding: 4rem 0 2rem 0;
 }
 @media screen and (min-width: 768px) {
   .shows {
     display: flex;
     flex-direction: column;
+    padding: 4rem 2rem 2rem 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -723,9 +724,12 @@ body {
     flex-direction: row;
   }
 }
+.shows__title {
+  padding: 0 2rem 2rem 2rem;
+}
 @media screen and (min-width: 768px) {
   .shows__title {
-    padding: 0 0 1rem 0;
+    padding: 0 0 5rem 0;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -744,14 +748,19 @@ body {
 @media screen and (min-width: 1280px) {
   .shows__container {
     width: 70%;
+    padding: 1.5rem 0 0 0;
   }
 }
 .shows__event {
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   border-bottom: 0.1rem solid #AFAFAF;
+}
+.shows__event--clicked {
+  background-color: #e1e1e1;
 }
 @media screen and (min-width: 768px) {
   .shows__event {
+    padding: 1rem 1.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -770,21 +779,41 @@ body {
     display: none;
   }
 }
-.shows__date {
-  font-size: 1.4rem;
-  font-weight: 600;
+.shows__header--tablet {
+  display: none;
 }
-.shows__venue {
-  font-size: 1.4rem;
+@media screen and (min-width: 768px) {
+  .shows__header--tablet {
+    color: #AFAFAF;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    display: flex;
+    padding: 0 1.5rem;
+  }
 }
-.shows__city {
+.shows__tablet {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 13rem;
+}
+@media screen and (min-width: 1280px) {
+  .shows__tablet {
+    gap: 10rem;
+  }
+}
+.shows__info {
   font-size: 1.4rem;
   padding: 0 0 1.5rem 0;
 }
 @media screen and (min-width: 768px) {
-  .shows__city {
+  .shows__info {
     padding: 0;
   }
+}
+.shows__featured {
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 .shows__tickets {
   color: #FFFFFF;
@@ -800,6 +829,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .shows__tickets {
-    width: auto;
+    width: 13rem;
   }
 }/*# sourceMappingURL=shows.css.map */
