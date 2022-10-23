@@ -51,48 +51,48 @@ function generateCommentCard(show) {
 
     //article container to hold each show in
     const articleEl = document.createElement('article');
-    articleEl.classList.add('show__container');
+    articleEl.classList.add('shows__event');
     showSectionDiv.appendChild(articleEl);
 
     //creating date heading
     const showDateHeading = document.createElement('h6');
-    showDateHeading.classList.add('show__date-heading');
+    showDateHeading.classList.add('shows__header');
     showDateHeading.innerText = 'Date';
     articleEl.appendChild(showDateHeading);
 
     //generating show dates
     const showDate = document.createElement('p');
-    showDate.classList.add('show__date');
+    showDate.classList.add('shows__date');
     showDate.innerText = show.date
     articleEl.appendChild(showDate);
 
     //generating show venue heading
     const showVenueHeading = document.createElement('h6');
-    showVenueHeading.classList.add('show__venue-heading');
+    showVenueHeading.classList.add('shows__header');
     showVenueHeading.innerText = 'Venue';
     articleEl.appendChild(showVenueHeading);
 
     //generating show venues
     const showVenue = document.createElement('p');
-    showVenue.classList.add('show__venue');
+    showVenue.classList.add('shows__venue');
     showVenue.innerText = show.venue;
     articleEl.appendChild(showVenue);
 
     //generating show city heading
     const showCityHeading = document.createElement('h6');
-    showCityHeading.classList.add('show__city-heading');
+    showCityHeading.classList.add('shows__header');
     showCityHeading.innerText = 'Location';
     articleEl.appendChild(showCityHeading);
 
     //generating show cities
     const showCity = document.createElement('p');
-    showCity.classList.add('show__city');
+    showCity.classList.add('shows__city');
     showCity.innerText = show.location;
     articleEl.appendChild(showCity);
 
     //generating 'buy tickets' button
     const showTickets = document.createElement('button');
-    showTickets.classList.add('show__tickets');
+    showTickets.classList.add('shows__tickets');
     showTickets.innerText = 'Buy Tickets';
     articleEl.appendChild(showTickets);
 }

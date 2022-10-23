@@ -605,8 +605,9 @@ nicely for users with screens as small as 350px*/
 }
 
 .iframe {
+  padding: 2rem 0 0 0;
   width: 90%;
-  height: 10rem;
+  height: 11rem;
   font-size: 10px;
   color: #cccccc;
   line-break: anywhere;
@@ -616,6 +617,7 @@ nicely for users with screens as small as 350px*/
   text-overflow: ellipsis;
   font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
   font-weight: 100;
+  z-index: 5;
 }
 .iframe__song {
   color: #cccccc;
@@ -630,4 +632,96 @@ body {
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+.shows {
+  padding: 2rem 2rem;
+}
+@media screen and (min-width: 768px) {
+  .shows {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows__title {
+    padding: 0 0 1rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__title {
+    width: 30%;
+    text-align: center;
+  }
+}
+.shows__container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1280px) {
+  .shows__container {
+    width: 70%;
+  }
+}
+.shows__event {
+  padding: 1rem 0;
+  border-bottom: 0.1rem solid #AFAFAF;
+}
+@media screen and (min-width: 768px) {
+  .shows__event {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.shows__header {
+  color: #AFAFAF;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1.25rem 0 0.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .shows__header {
+    display: none;
+  }
+}
+.shows__date {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.shows__venue {
+  font-size: 1.4rem;
+}
+.shows__city {
+  font-size: 1.4rem;
+  padding: 0 0 1.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .shows__city {
+    padding: 0;
+  }
+}
+.shows__tickets {
+  color: #FFFFFF;
+  background-color: #323232;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .shows__tickets {
+    width: auto;
+  }
 }/*# sourceMappingURL=shows.css.map */

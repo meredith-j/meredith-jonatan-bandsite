@@ -480,8 +480,9 @@ nicely for users with screens as small as 350px*/
 }
 
 .iframe {
+  padding: 2rem 0 0 0;
   width: 90%;
-  height: 10rem;
+  height: 11rem;
   font-size: 10px;
   color: #cccccc;
   line-break: anywhere;
@@ -491,6 +492,7 @@ nicely for users with screens as small as 350px*/
   text-overflow: ellipsis;
   font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
   font-weight: 100;
+  z-index: 5;
 }
 .iframe__song {
   color: #cccccc;

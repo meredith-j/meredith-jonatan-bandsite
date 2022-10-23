@@ -100,8 +100,9 @@ were way too dull at 50% compared to the mock up */
 }
 
 .iframe {
+    padding: 2rem 0 0 0;
     width: 90%;
-    height: 10rem;
+    height: 11rem;
     font-size: 10px;
     color: #cccccc;
     line-break: anywhere;
@@ -111,6 +112,7 @@ were way too dull at 50% compared to the mock up */
     text-overflow: ellipsis;
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
     font-weight: 100;
+    z-index: 5;
 
     &__song {
         color: #cccccc;
