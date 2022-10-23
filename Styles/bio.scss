@@ -204,21 +204,7 @@ body {
     }
 }
 
-.forum {
-    padding: 2rem 1rem;
 
-    @include tablet  {
-        padding: 3rem 3.25rem;
-    }
-
-    @include desktop {
-        padding: 3rem 8.75rem;
-    }
-
-    &__heading {
-        color: $primary-black;
-        padding: 0 0 1rem 0;
-    }
 
 /*    &__container {
         background-color: navy;
@@ -228,6 +214,15 @@ body {
         }
 */
 
+.conversation__container {
+    @include tablet {
+        margin: auto;
+        width: 85%;
+    }
+
+    @include desktop {
+        width: 50%;
+    }
 }
 
 .comment {
@@ -237,6 +232,15 @@ body {
         align-content: flex-start;
         height: 21.5rem;
         border-bottom: 0.1rem solid $mercury;
+
+        @include tablet {
+            height: 23rem;
+
+        :nth-child(3) {
+            align-items: flex-end;
+            }
+        
+        }
     }
 
     &__image-container {
@@ -244,6 +248,10 @@ body {
         padding: 2.25rem 0 0 0.5rem;
         height: 21.5rem;
         width: 4.5rem;
+
+        @include tablet {
+            padding: 2.25rem 0 0 0;
+        }
     }
 
     &__image {
@@ -252,13 +260,18 @@ body {
         border-radius: 2rem;
         object-position: left;
         object-fit: cover;
+
+        @include tablet {
+            height: 3.5rem;
+            width: 3.5rem;
+        }
     }
 
     &__user-container {
         display: flex;
         flex-direction: column;
         padding: 0 0 0 4.5rem;
-        height: 100%;
+        height: 100%; 
     }
 
     &__container {
@@ -266,6 +279,10 @@ body {
         flex-direction: column;
         height: 100%;
         padding: 0 0 1.5rem 0;
+
+        @include tablet {
+            padding: 0 0 2rem 0;
+        }
     }
 
     &__label {
@@ -282,11 +299,13 @@ body {
         border: 0.15rem solid $mercury;
         border-radius: 0.5rem;
         height: 3rem;
+
+        &:active {
+            border: 0.1rem solid $primary-black;
+        }
     }
 
-    &__name:active {
-        border: 0.1rem solid $primary-black;
-    }
+    
 
     &__draft {
         color: $hover-black;
@@ -305,11 +324,36 @@ body {
         padding: 1.25rem 2.5rem;
         border: none;
         border-radius: 0.5rem;
+
+        @include tablet {
+            width: 15rem;
+        }
+
+        @include desktop {
+            width: 12rem;
+        }
     }    
 }
 
 .forum {
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 2rem 1rem;
+
+    @include tablet  {
+        padding: 3rem 3.25rem;
+    }
+
+    @include desktop {
+        padding: 3rem 8.75rem;
+    }
+
+    &__heading {
+        color: $primary-black;
+        padding: 0 0 1rem 0;
+
+        @include tablet {
+            padding: 0 0 4rem 0;
+        }
+    }
 
     &__container {
         display: flex;
@@ -327,6 +371,10 @@ body {
     &__image {
         padding: 0 1.75rem 0 0.5rem;
         position: absolute;
+
+        @include tablet {
+            padding: 0 1.75rem 0 0;
+        }
     }
 
     &__photo {
@@ -334,6 +382,12 @@ body {
         height: 3rem;
         width: 3rem;
         border-radius: 1.5rem;
+
+        @include tablet {
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 2rem;
+        }
     }
 
     &__name-date {
@@ -355,8 +409,13 @@ body {
 
     &__content {
         color: $primary-black;
+        line-height: 2.5rem;
         padding: 0 0 0 4.5rem;
         width: 98%;
+
+        @include desktop {
+            line-height: 1.75rem;
+        }
     }
 
 }

@@ -708,6 +708,7 @@ body {
 }
 
 .shows {
+  color: #323232;
   padding: 2rem 2rem;
 }
 @media screen and (min-width: 768px) {

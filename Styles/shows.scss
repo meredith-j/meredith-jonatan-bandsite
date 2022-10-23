@@ -17,6 +17,7 @@ body {
 }
 
 .shows {
+    color: $primary-black;
     padding: 2rem 2rem;
 
     @include tablet {

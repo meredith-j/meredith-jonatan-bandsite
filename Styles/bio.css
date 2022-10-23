@@ -900,29 +900,23 @@ body {
   }
 }
 
-.forum {
-  padding: 2rem 1rem;
-  /*    &__container {
-          background-color: navy;
+/*    &__container {
+        background-color: navy;
 
-          :nth-child(2n + 4){
-              background-color: aquamarine;
-          }
-  */
-}
+        :nth-child(2n + 4){
+            background-color: aquamarine;
+        }
+*/
 @media screen and (min-width: 768px) {
-  .forum {
-    padding: 3rem 3.25rem;
+  .conversation__container {
+    margin: auto;
+    width: 85%;
   }
 }
 @media screen and (min-width: 1280px) {
-  .forum {
-    padding: 3rem 8.75rem;
+  .conversation__container {
+    width: 50%;
   }
-}
-.forum__heading {
-  color: #323232;
-  padding: 0 0 1rem 0;
 }
 
 .comment__form {
@@ -932,11 +926,24 @@ body {
   height: 21.5rem;
   border-bottom: 0.1rem solid #e1e1e1;
 }
+@media screen and (min-width: 768px) {
+  .comment__form {
+    height: 23rem;
+  }
+  .comment__form :nth-child(3) {
+    align-items: flex-end;
+  }
+}
 .comment__image-container {
   position: absolute;
   padding: 2.25rem 0 0 0.5rem;
   height: 21.5rem;
   width: 4.5rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__image-container {
+    padding: 2.25rem 0 0 0;
+  }
 }
 .comment__image {
   height: 3.25rem;
@@ -946,6 +953,12 @@ body {
      object-position: left;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .comment__image {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
 }
 .comment__user-container {
   display: flex;
@@ -958,6 +971,11 @@ body {
   flex-direction: column;
   height: 100%;
   padding: 0 0 1.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .comment__container {
+    padding: 0 0 2rem 0;
+  }
 }
 .comment__label {
   color: #AFAFAF;
@@ -993,9 +1011,38 @@ body {
   border: none;
   border-radius: 0.5rem;
 }
+@media screen and (min-width: 768px) {
+  .comment__submit {
+    width: 15rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__submit {
+    width: 12rem;
+  }
+}
 
 .forum {
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 2rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .forum {
+    padding: 3rem 3.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .forum {
+    padding: 3rem 8.75rem;
+  }
+}
+.forum__heading {
+  color: #323232;
+  padding: 0 0 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .forum__heading {
+    padding: 0 0 4rem 0;
+  }
 }
 .forum__container {
   display: flex;
@@ -1012,11 +1059,23 @@ body {
   padding: 0 1.75rem 0 0.5rem;
   position: absolute;
 }
+@media screen and (min-width: 768px) {
+  .forum__image {
+    padding: 0 1.75rem 0 0;
+  }
+}
 .forum__photo {
   background-color: #e1e1e1;
   height: 3rem;
   width: 3rem;
   border-radius: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .forum__photo {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+  }
 }
 .forum__name-date {
   display: flex;
@@ -1034,6 +1093,12 @@ body {
 }
 .forum__content {
   color: #323232;
+  line-height: 2.5rem;
   padding: 0 0 0 4.5rem;
   width: 98%;
+}
+@media screen and (min-width: 1280px) {
+  .forum__content {
+    line-height: 1.75rem;
+  }
 }/*# sourceMappingURL=bio.css.map */
