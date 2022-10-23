@@ -544,6 +544,12 @@ nicely for users with screens as small as 350px*/
   background-image: url(../assets/images/hero-shows.jpg);
   height: 25rem;
 }
+@media screen and (min-width: 768px) {
+  .hero--shows-image {
+    height: 38rem;
+    background-position: center right;
+  }
+}
 .hero__filter {
   position: absolute;
   background-size: inherit;
@@ -564,6 +570,11 @@ nicely for users with screens as small as 350px*/
 }
 .hero__filter--shows {
   height: 25rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__filter--shows {
+    height: 38rem;
+  }
 }
 .hero__heading {
   color: #FFFFFF;
@@ -591,22 +602,40 @@ nicely for users with screens as small as 350px*/
   padding: 0rem;
   line-height: 3rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__heading--shows {
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
+}
 .hero__subheading {
   color: #FFFFFF;
   font-size: 1.25rem;
   word-spacing: 0.5rem;
-  padding: 0 0 1.25rem 0;
+  padding: 0 0 1.5rem 0;
   z-index: 3;
+}
+@media screen and (min-width: 768px) {
+  .hero__subheading {
+    font-size: 1.9rem;
+    font-weight: 600;
+    padding: 0 0 3rem 0;
+  }
 }
 .hero__info {
   display: flex;
   flex-direction: column;
   padding: 2.75rem 0 0 2rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__info {
+    padding: 5rem 0 0 3.5rem;
+  }
+}
 
 .iframe {
   padding: 2rem 0 0 0;
-  width: 90%;
+  width: 95%;
   height: 11rem;
   font-size: 10px;
   color: #cccccc;
@@ -619,9 +648,12 @@ nicely for users with screens as small as 350px*/
   font-weight: 100;
   z-index: 5;
 }
-.iframe__song {
-  color: #cccccc;
-  text-decoration: none;
+@media screen and (min-width: 768px) {
+  .iframe {
+    padding: 4rem 0 0 0;
+    width: 38rem;
+    height: 14.5rem;
+  }
 }
 
 body {

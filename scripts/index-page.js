@@ -122,7 +122,7 @@ commentForm.addEventListener("submit", (event) => {
     let month = date.getMonth()+1;
     let year = date.getFullYear();
 
-    let newDate = `${month}/${day}/${year}.`;
+    let newDate = `${month}/${day}/${year}`;
 
     addComment(name, newDate, comment);
 

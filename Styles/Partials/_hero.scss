@@ -33,6 +33,11 @@ be visible in the desktop, even as the image crops at certain screen sizes */
     &--shows-image {
         background-image: url(../assets/images/hero-shows.jpg);
         height: 25rem;
+
+        @include tablet {
+            height: 38rem;
+            background-position: center right;
+        }
     }
 /* style guide says opacity should be set at 50% but doesn't match
 the mock up - not sure if this is just my computer but the colours
@@ -55,6 +60,10 @@ were way too dull at 50% compared to the mock up */
 
         &--shows {
             height: 25rem;
+
+            @include tablet {
+                height: 38rem;
+            }
         }
     }
 
@@ -81,6 +90,11 @@ were way too dull at 50% compared to the mock up */
             position: relative;
             padding: 0rem;
             line-height: 3rem;
+
+            @include tablet {
+                font-size: 4.5rem;
+                line-height: 5rem;
+            }
         }
     }
 
@@ -88,20 +102,30 @@ were way too dull at 50% compared to the mock up */
         color: $white;
         font-size: 1.25rem;
         word-spacing: 0.5rem;
-        padding: 0 0 1.25rem 0;
+        padding: 0 0 1.5rem 0;
         z-index: 3;
+
+        @include tablet {
+            font-size: 1.9rem;
+            font-weight: 600;
+            padding: 0 0 3rem 0;
+        }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
         padding: 2.75rem 0 0 2rem;
+
+        @include tablet {
+            padding: 5rem 0 0 3.5rem;
+        }
     }
 }
 
 .iframe {
     padding: 2rem 0 0 0;
-    width: 90%;
+    width: 95%;
     height: 11rem;
     font-size: 10px;
     color: #cccccc;
@@ -114,9 +138,10 @@ were way too dull at 50% compared to the mock up */
     font-weight: 100;
     z-index: 5;
 
-    &__song {
-        color: #cccccc;
-        text-decoration: none;
+    @include tablet {
+        padding: 4rem 0 0 0;
+        width: 38rem;
+        height: 14.5rem;
     }
 }
 
