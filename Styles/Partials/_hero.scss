@@ -23,7 +23,7 @@ nicely for users with screens as small as 350px*/
 be visible in the desktop, even as the image crops at certain screen sizes */
     @include desktop {
         background-position: top right;
-        min-height: 48rem;
+        height: 48rem;
     }
 
     &--bio-image {
@@ -38,6 +38,11 @@ be visible in the desktop, even as the image crops at certain screen sizes */
             height: 38rem;
             background-position: center right;
         }
+
+        @include desktop {
+            height: 40rem;
+            background-position: center 30%;
+        }
     }
 /* style guide says opacity should be set at 50% but doesn't match
 the mock up - not sure if this is just my computer but the colours
@@ -51,11 +56,11 @@ were way too dull at 50% compared to the mock up */
         height: 20rem;
 
         @include tablet {
-            min-height: 36rem;
+            height: 36rem;
         }
 
         @include desktop {
-            min-height: 48rem;
+            height: 48rem;
         }
 
         &--shows {
@@ -63,6 +68,10 @@ were way too dull at 50% compared to the mock up */
 
             @include tablet {
                 height: 38rem;
+            }
+
+            @include desktop {
+                height: 40rem;
             }
         }
     }
@@ -90,10 +99,18 @@ were way too dull at 50% compared to the mock up */
             position: relative;
             padding: 0rem;
             line-height: 3rem;
+            width: 20rem;
 
             @include tablet {
                 font-size: 4.5rem;
                 line-height: 5rem;
+                width: 42rem;
+            }
+
+            @include desktop {
+                font-size: 3.5rem;
+                word-spacing: 0.65rem;
+                width: 30rem;
             }
         }
     }
@@ -110,8 +127,16 @@ were way too dull at 50% compared to the mock up */
             font-weight: 600;
             padding: 0 0 3rem 0;
         }
+
+        @include desktop {
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: 0.02rem;
+        padding: 0 0 1.5rem 0;
+        }
     }
 
+    //flexbox for shows hero headings & iframe
     &__info {
         display: flex;
         flex-direction: column;
@@ -119,6 +144,10 @@ were way too dull at 50% compared to the mock up */
 
         @include tablet {
             padding: 5rem 0 0 3.5rem;
+        }
+
+        @include desktop {
+            padding: 13rem 0 0 8.75rem;
         }
     }
 }
@@ -142,6 +171,13 @@ were way too dull at 50% compared to the mock up */
         padding: 4rem 0 0 0;
         width: 38rem;
         height: 14.5rem;
+    }
+
+    @include desktop {
+        position: absolute;
+        top: 12rem;
+        left: 46rem;
+        width: 28rem;
     }
 }
 

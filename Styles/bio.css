@@ -409,7 +409,7 @@ nicely for users with screens as small as 350px*/
 @media screen and (min-width: 1280px) {
   .hero {
     background-position: top right;
-    min-height: 48rem;
+    height: 48rem;
   }
 }
 .hero--bio-image {
@@ -425,6 +425,12 @@ nicely for users with screens as small as 350px*/
     background-position: center right;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero--shows-image {
+    height: 40rem;
+    background-position: center 30%;
+  }
+}
 .hero__filter {
   position: absolute;
   background-size: inherit;
@@ -435,12 +441,12 @@ nicely for users with screens as small as 350px*/
 }
 @media screen and (min-width: 768px) {
   .hero__filter {
-    min-height: 36rem;
+    height: 36rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__filter {
-    min-height: 48rem;
+    height: 48rem;
   }
 }
 .hero__filter--shows {
@@ -449,6 +455,11 @@ nicely for users with screens as small as 350px*/
 @media screen and (min-width: 768px) {
   .hero__filter--shows {
     height: 38rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__filter--shows {
+    height: 40rem;
   }
 }
 .hero__heading {
@@ -476,11 +487,20 @@ nicely for users with screens as small as 350px*/
   position: relative;
   padding: 0rem;
   line-height: 3rem;
+  width: 20rem;
 }
 @media screen and (min-width: 768px) {
   .hero__heading--shows {
     font-size: 4.5rem;
     line-height: 5rem;
+    width: 42rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__heading--shows {
+    font-size: 3.5rem;
+    word-spacing: 0.65rem;
+    width: 30rem;
   }
 }
 .hero__subheading {
@@ -497,6 +517,14 @@ nicely for users with screens as small as 350px*/
     padding: 0 0 3rem 0;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero__subheading {
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    padding: 0 0 1.5rem 0;
+  }
+}
 .hero__info {
   display: flex;
   flex-direction: column;
@@ -505,6 +533,11 @@ nicely for users with screens as small as 350px*/
 @media screen and (min-width: 768px) {
   .hero__info {
     padding: 5rem 0 0 3.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__info {
+    padding: 13rem 0 0 8.75rem;
   }
 }
 
@@ -528,6 +561,14 @@ nicely for users with screens as small as 350px*/
     padding: 4rem 0 0 0;
     width: 38rem;
     height: 14.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .iframe {
+    position: absolute;
+    top: 12rem;
+    left: 46rem;
+    width: 28rem;
   }
 }
 
