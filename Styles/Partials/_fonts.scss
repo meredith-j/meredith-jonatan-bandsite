@@ -43,7 +43,7 @@ h1 {
 
 //section headers
 h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 600;
     line-height: 3rem;
 
@@ -112,6 +112,24 @@ h5 {
         font-size: 1.8rem;
         font-weight: 600;
         line-height: 2.75rem;
+    }
+}
+
+h6 {
+    font-size: 0.625rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+
+    @include tablet {
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1.25rem;
+    }
+
+    @include desktop {
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1.25rem;
     }
 }
 

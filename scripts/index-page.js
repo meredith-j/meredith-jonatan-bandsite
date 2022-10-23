@@ -56,7 +56,7 @@ function generateCommentCard(person) {
 
     // add commenter profile photos - currently just a gray circle
     const imageEl = document.createElement('div');
-    imageEl.classList.add('comment__image');
+    imageEl.classList.add('forum__photo');
     //  don't need this line for now - maybe if we get images 
     //  imageEl.src = person.image.url;
 
@@ -66,29 +66,29 @@ function generateCommentCard(person) {
 
     // div: container for commenter's name & date
     const nameDateDiv = document.createElement('div');
-    nameDateDiv.classList.add('comment__name-date');
+    nameDateDiv.classList.add('forum__name-date');
     articleEl.appendChild(nameDateDiv);
 
     //commenter name
     const commenterNameEl = document.createElement('p');
-    commenterNameEl.classList.add('comment__user')
+    commenterNameEl.classList.add('forum__user')
     commenterNameEl.innerText = person.userName;
     nameDateDiv.appendChild(commenterNameEl);
 
     //comment date
     const commenterDateEl = document.createElement('p');
-    commenterDateEl.classList.add('comment__date')
+    commenterDateEl.classList.add('forum__date')
     commenterDateEl.innerText = person.commentDate;
     nameDateDiv.appendChild(commenterDateEl);
 
     // div: container for comment
     const commentDiv = document.createElement('div');
-    commentDiv.classList.add('comment__comment');
+    commentDiv.classList.add('forum__comment-container');
     articleEl.appendChild(commentDiv);
 
     //comment content
     const commentContentEl = document.createElement('p');
-    commentContentEl.classList.add('comment__content');
+    commentContentEl.classList.add('forum__content');
     commentContentEl.innerText = person.commentContent;
     commentDiv.appendChild(commentContentEl);
 }
@@ -113,16 +113,16 @@ commentForm.addEventListener("submit", (event) => {
     // handle the event - prevent page from reloading
     event.preventDefault();
 
-    let name = event.target.name.value
-    let comment = event.target.name.value
+    let name = event.target.name.value;
+    let comment = event.target.comment.value;
 
     
-    let date = new Date()
+    let date = new Date();
     let day = date.getDate();
     let month = date.getMonth()+1;
     let year = date.getFullYear();
 
-    let newDate = `${day}/${month}/${year}.`;
+    let newDate = `${month}/${day}/${year}.`;
 
     addComment(name, newDate, comment);
 

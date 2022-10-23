@@ -47,7 +47,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 600;
   line-height: 3rem;
 }
@@ -121,6 +121,26 @@ h5 {
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 2.75rem;
+  }
+}
+
+h6 {
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  h6 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h6 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.25rem;
   }
 }
 

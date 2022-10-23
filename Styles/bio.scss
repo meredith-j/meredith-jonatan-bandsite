@@ -217,6 +217,7 @@ body {
 
     &__heading {
         color: $primary-black;
+        padding: 0 0 1rem 0;
     }
 
 /*    &__container {
@@ -230,10 +231,131 @@ body {
 }
 
 .comment {
-    &__image {
-        background-color: $mercury;
-        height: 2rem;
-        width: 2rem;
-        border-radius: 1rem;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        width: 100%;
+        height: 21.5rem;
+        border-bottom: 0.1rem solid $mercury;
     }
+
+    &__image-container {
+        padding: 2.25rem 0 0 0.4rem;
+        height: 21.5rem;
+        width: 4.5rem;
+    }
+
+    &__image {
+        height: 3.25rem;
+        width: 3.25rem;
+        border-radius: 2rem;
+        object-position: left;
+        object-fit: cover;
+    }
+
+    &__user-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0 0 1.5rem 0;
+    }
+
+    &__label {
+        color: $silver;
+        font-weight: 600;
+        letter-spacing: 0.02rem;
+        text-transform: uppercase;
+        padding: 0.5rem 0;
+    }
+
+    &__name {
+        color: $hover-black;
+        background-color: $alabaster;
+        border: 0.15rem solid $mercury;
+        border-radius: 0.5rem;
+        height: 3rem;
+    }
+
+    &__name:active {
+        border: 0.1rem solid $primary-black;
+    }
+
+    &__draft {
+        color: $hover-black;
+        background-color: $alabaster;
+        border: 0.15rem solid $mercury;
+        border-radius: 0.5rem;
+        height: 6rem;
+    }
+
+    &__submit {
+        background-color: $primary-black;
+        text-transform: uppercase;
+        color: $white;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 1.25rem 2.5rem;
+        border: none;
+        border-radius: 0.5rem;
+    }    
+}
+
+.forum {
+    padding: 1rem 1rem;
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__comment {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-bottom: 0.1rem solid $mercury;
+        padding: 1.5rem 0;
+    }
+
+    &__image {
+        padding: 0 1.75rem 0 0.5rem;
+        position: absolute;
+    }
+
+    &__photo {
+        background-color: $mercury;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 1.5rem;
+    }
+
+    &__name-date {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 0 0.75rem 4.5rem;
+        width: 98%;
+    }
+
+    &__user {
+        color: $primary-black;
+        font-weight: 600;
+    }
+
+    &__date {
+        color: $silver;
+    }
+
+    &__content {
+        color: $primary-black;
+        padding: 0 0 0 4.5rem;
+        width: 98%;
+    }
+
 }

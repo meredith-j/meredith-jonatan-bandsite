@@ -96,3 +96,11 @@ function generateCommentCard(show) {
     showTickets.innerText = 'Buy Tickets';
     articleEl.appendChild(showTickets);
 }
+
+/*  pseudocode:
+
+- add event listener for click on ArticleEl (flexbox for details on each event)
+- if articleEl is clicked
+- add modifier class 'show__container--clicked'
+- if anywhere else on the page (document?) is clicked
+- remove modifier class 'show__container--clicked" */
