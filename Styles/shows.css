@@ -498,25 +498,26 @@ button {
   }
 }
 
-body {
-  font-family: "Avenir";
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
+/*form fields error state*/
+/* matches mock up exactly at 488px, however
+will scale nicely to any size within the
+tablet px range */
+/* matches mock up exactly at 1056px, however
+will scale nicely to any size within the
+tablet px range */
+/* matches mock up exactly at 1447px, however
+will scale nicely to any size within the
+tablet px range */
+/*mobile hero is matches the mockup at 617px by 1108px but will scale
+nicely for users with screens as small as 350px*/
 .hero {
   margin: 0;
-  background-image: url(../assets/images/hero-shows.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: right;
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
-  min-height: 38rem;
+  min-height: 20rem;
   z-index: 1;
   /* no matter what screen size between 1280 and 1980, the bee will always
   be visible in the desktop, even as the image crops at certain screen sizes */
@@ -536,13 +537,20 @@ body {
     min-height: 48rem;
   }
 }
+.hero--bio-image {
+  background-image: url(../../Assets/Images/hero-bio.jpg);
+}
+.hero--shows-image {
+  background-image: url(../assets/images/hero-shows.jpg);
+  height: 25rem;
+}
 .hero__filter {
   position: absolute;
   background-size: inherit;
   background-color: #323232;
-  opacity: 33%;
+  opacity: 50%;
   width: 100%;
-  height: 38rem;
+  height: 20rem;
 }
 @media screen and (min-width: 768px) {
   .hero__filter {
@@ -553,6 +561,9 @@ body {
   .hero__filter {
     min-height: 48rem;
   }
+}
+.hero__filter--shows {
+  height: 25rem;
 }
 .hero__heading {
   color: #FFFFFF;
@@ -573,4 +584,50 @@ body {
     padding: 23rem 8.76rem;
     word-spacing: 0;
   }
+}
+.hero__heading--shows {
+  font-size: 2.1rem;
+  position: relative;
+  padding: 0rem;
+  line-height: 3rem;
+}
+.hero__subheading {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  word-spacing: 0.5rem;
+  padding: 0 0 1.25rem 0;
+  z-index: 3;
+}
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  padding: 2.75rem 0 0 2rem;
+}
+
+.iframe {
+  width: 90%;
+  height: 10rem;
+  font-size: 10px;
+  color: #cccccc;
+  line-break: anywhere;
+  word-break: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+}
+.iframe__song {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Avenir";
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
 }/*# sourceMappingURL=shows.css.map */

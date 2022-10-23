@@ -234,15 +234,14 @@ body {
     &__form {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         align-content: flex-start;
-        width: 100%;
         height: 21.5rem;
         border-bottom: 0.1rem solid $mercury;
     }
 
     &__image-container {
-        padding: 2.25rem 0 0 0.4rem;
+        position: absolute;
+        padding: 2.25rem 0 0 0.5rem;
         height: 21.5rem;
         width: 4.5rem;
     }
@@ -258,6 +257,7 @@ body {
     &__user-container {
         display: flex;
         flex-direction: column;
+        padding: 0 0 0 4.5rem;
         height: 100%;
     }
 
@@ -309,7 +309,8 @@ body {
 }
 
 .forum {
-    padding: 1rem 1rem;
+    padding: 1rem 1rem 2rem 1rem;
+
     &__container {
         display: flex;
         flex-direction: column;
