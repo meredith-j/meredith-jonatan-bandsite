@@ -46,6 +46,10 @@ body {
         display: flex;
         flex-direction: column;
 
+        :hover {
+            background-color: $alabaster;
+        }
+        
         @include desktop {
             width: 70%;
         }
@@ -104,6 +108,7 @@ body {
         border-radius: 0.25rem;
         width: 100%;
         padding: 1rem 0;
+        pointer-events: none;
 
         @include tablet {
             width: auto;

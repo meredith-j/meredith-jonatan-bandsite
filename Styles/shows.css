@@ -738,6 +738,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.shows__container :hover {
+  background-color: #fafafa;
+}
 @media screen and (min-width: 1280px) {
   .shows__container {
     width: 70%;
@@ -793,6 +796,7 @@ body {
   border-radius: 0.25rem;
   width: 100%;
   padding: 1rem 0;
+  pointer-events: none;
 }
 @media screen and (min-width: 768px) {
   .shows__tickets {
