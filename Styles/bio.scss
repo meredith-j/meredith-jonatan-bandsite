@@ -254,11 +254,11 @@ input, textarea {
         display: flex;
         flex-direction: column;
         align-content: flex-start;
-        height: 25rem;
+        height: 26.5rem;
         border-bottom: 0.1rem solid $mercury;
 
         @include tablet {
-            height: 26.5rem;
+            height: 27.5rem;
 
         :nth-child(3) {
             align-items: flex-end;
@@ -328,11 +328,15 @@ input, textarea {
     
 
     &__draft {
+        resize: none;
         color: $hover-black;
+        overflow-wrap: break-word;
         background-color: $alabaster;
         border: 0.15rem solid $mercury;
         border-radius: 0.5rem;
         padding: 1rem 1rem 6rem 1rem;
+        font-family: 'Avenir';
+        
     }
 
     &__submit {

@@ -765,7 +765,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
   }
 }
 .shows__header {
@@ -790,18 +789,22 @@ body {
     text-transform: uppercase;
     display: flex;
     padding: 0 1.5rem;
+    width: 25%;
   }
 }
 .shows__tablet {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 15%;
   padding: 0 0 0.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .shows__tablet {
+    justify-content: normal;
+  }
 }
 @media screen and (min-width: 1280px) {
   .shows__tablet {
-    gap: 20%;
     padding: 0 0 2rem 0;
   }
 }
@@ -812,11 +815,17 @@ body {
 @media screen and (min-width: 768px) {
   .shows__info {
     padding: 0;
+    width: 25%;
   }
 }
 .shows__featured {
   font-size: 1.4rem;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .shows__featured {
+    width: 18rem;
+  }
 }
 .shows__tickets {
   color: #FFFFFF;
@@ -833,5 +842,6 @@ body {
 @media screen and (min-width: 768px) {
   .shows__tickets {
     width: 13rem;
+    margin: 0 0 0 3rem;
   }
 }/*# sourceMappingURL=shows.css.map */

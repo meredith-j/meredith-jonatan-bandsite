@@ -947,12 +947,12 @@ input, textarea {
   display: flex;
   flex-direction: column;
   align-content: flex-start;
-  height: 25rem;
+  height: 26.5rem;
   border-bottom: 0.1rem solid #e1e1e1;
 }
 @media screen and (min-width: 768px) {
   .comment__form {
-    height: 26.5rem;
+    height: 27.5rem;
   }
   .comment__form :nth-child(3) {
     align-items: flex-end;
@@ -1016,11 +1016,14 @@ input, textarea {
   height: 3.5rem;
 }
 .comment__draft {
+  resize: none;
   color: #000000;
+  overflow-wrap: break-word;
   background-color: #fafafa;
   border: 0.15rem solid #e1e1e1;
   border-radius: 0.5rem;
   padding: 1rem 1rem 6rem 1rem;
+  font-family: "Avenir";
 }
 .comment__submit {
   background-color: #323232;
