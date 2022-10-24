@@ -97,6 +97,41 @@ function generateCommentCard(show) {
     articleEl.appendChild(showTickets);
 }
 
+const articleEl1 = document.querySelectorAll('.shows__event');
+    
+
+console.log (articleEl1);
+
+    for (let i = 0; i < articleEl1.length; i++) {
+        const showsEvent = articleEl1[i];
+
+        showsEvent.addEventListener("click", function (event) {
+            // handle the event - prevent page from reloading
+            event.preventDefault();
+
+            for (let i = 0; i < articleEl1.length; i++) {
+                const showsEvent = articleEl1[i];
+            showsEvent.classList.remove("shows__event--clicked")
+        };
+
+            showsEvent.classList.add("shows__event--clicked");
+        });
+    }
+
+      
+      /*
+       if (!event.target.classList.contains("shows__event--clicked")) {
+        showSectionDiv.classList.remove("shows__event--clicked");
+        event.target.classList.add("shows__event--clicked");
+    }
+    else if (showSectionDiv.classList.contains("shows__event--clicked")) {
+        showSectionDiv.classList.remove("shows__event--clicked");
+        event.target.classList.add("shows__event--clicked")
+    }
+*/
+
+
+
 /*  pseudocode:
 
 - add event listener for click on ArticleEl (flexbox for details on each event)

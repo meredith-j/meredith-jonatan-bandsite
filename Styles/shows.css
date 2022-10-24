@@ -795,11 +795,11 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 13rem;
+  gap: 15%;
 }
 @media screen and (min-width: 1280px) {
   .shows__tablet {
-    gap: 10rem;
+    gap: 15%;
   }
 }
 .shows__info {
