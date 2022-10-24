@@ -670,14 +670,14 @@ nicely for users with screens as small as 350px*/
 }
 @media screen and (min-width: 768px) {
   .nav__link--inactive :hover {
-    padding: 0 0 2.8rem 0;
+    padding: 0 0 2.7rem 0;
     border-bottom: underline 0.15rem solid #FFFFFF;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .nav__link--inactive :hover {
     padding: 0 0 3.37rem 0;
     border-bottom: underline 0.15rem solid #FFFFFF;

@@ -93,12 +93,12 @@
                 border-bottom: solid 0.25rem $white;
                 
                 @include tablet {
-                    padding: 0 0 2.8rem 0;
+                    padding: 0 0 2.7rem 0;
                     border-bottom: underline 0.15rem solid $white;
                     width: fit-content;
                 }
 
-                @include tablet {
+                @include desktop {
                     padding: 0 0 3.37rem 0;
                     border-bottom: underline 0.15rem solid $white;
                     width: fit-content;

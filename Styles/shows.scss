@@ -48,13 +48,15 @@ body {
         display: flex;
         flex-direction: column;
 
-        :hover {
-            background-color: $alabaster;
-        }
-
         @include desktop {
             width: 70%;
             padding: 1.5rem 0 0 0;
+        }
+    }
+
+    &__container-js {
+        :hover {
+            background-color: $alabaster;
         }
     }
 
@@ -64,6 +66,7 @@ body {
 
         &--clicked {
             background-color: $mercury;
+            pointer-events: none;
         }
 
         @include tablet {
@@ -106,9 +109,11 @@ body {
         flex-direction: row;
         justify-content: flex-start;
         gap: 15%;
+        padding: 0 0 0.5rem 0;
 
         @include desktop {
             gap: 20%;
+            padding: 0 0 2rem 0;
         }
     }
 
