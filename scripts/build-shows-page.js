@@ -114,7 +114,12 @@ console.log (articleEl1);
             showsEvent.classList.remove("shows__event--clicked")
         };
 
+        if (!event.target.classList.contains("shows__event--clicked")) {
+            showsEvent.classList.remove("shows__event--clicked");
             showsEvent.classList.add("shows__event--clicked");
-        });
-    }
+        }
+        else if (event.target.classList.contains("shows__event--clicked")) {
+            showsEvent.classList.remove("shows__event--clicked");
+        }
+        })}
 
