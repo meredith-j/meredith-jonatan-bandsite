@@ -37,7 +37,7 @@ let shows = [
 ];
 
 //select correct container to add JS to
-const showSectionDiv = document.querySelector('.shows__container');
+const showSectionDiv = document.querySelector('.shows__container-js');
 
 //tells JS to add entire list of comments to HTML
 for (let i = 0; i < shows.length; i++) {
@@ -118,24 +118,3 @@ console.log (articleEl1);
         });
     }
 
-      
-      /*
-       if (!event.target.classList.contains("shows__event--clicked")) {
-        showSectionDiv.classList.remove("shows__event--clicked");
-        event.target.classList.add("shows__event--clicked");
-    }
-    else if (showSectionDiv.classList.contains("shows__event--clicked")) {
-        showSectionDiv.classList.remove("shows__event--clicked");
-        event.target.classList.add("shows__event--clicked")
-    }
-*/
-
-
-
-/*  pseudocode:
-
-- add event listener for click on ArticleEl (flexbox for details on each event)
-- if articleEl is clicked
-- add modifier class 'show__container--clicked'
-- if anywhere else on the page (document?) is clicked
-- remove modifier class 'show__container--clicked" */

@@ -214,6 +214,30 @@ body {
         }
 */
 
+#comment:focus {
+    outline-color: $primary-black;
+    font-size: 1.2rem;
+    padding: 1rem 1rem 6rem 1rem;
+}
+
+#name:focus {
+    outline-color: $primary-black;
+    font-size: 1.2rem;
+    padding: 0 0 0 1.2rem;
+}
+
+input, textarea {
+    font-size: 1.2rem;
+    padding: 0 0 0 1.2rem;
+    text-align: inherit;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .conversation__container {
     @include tablet {
         margin: auto;
@@ -230,11 +254,11 @@ body {
         display: flex;
         flex-direction: column;
         align-content: flex-start;
-        height: 21.5rem;
+        height: 25rem;
         border-bottom: 0.1rem solid $mercury;
 
         @include tablet {
-            height: 23rem;
+            height: 26.5rem;
 
         :nth-child(3) {
             align-items: flex-end;
@@ -298,11 +322,7 @@ body {
         background-color: $alabaster;
         border: 0.15rem solid $mercury;
         border-radius: 0.5rem;
-        height: 3rem;
-
-        &:active {
-            border: 0.1rem solid $primary-black;
-        }
+        height: 3.5rem;
     }
 
     
@@ -312,7 +332,7 @@ body {
         background-color: $alabaster;
         border: 0.15rem solid $mercury;
         border-radius: 0.5rem;
-        height: 6rem;
+        padding: 1rem 1rem 6rem 1rem;
     }
 
     &__submit {

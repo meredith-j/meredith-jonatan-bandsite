@@ -799,7 +799,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .shows__tablet {
-    gap: 15%;
+    gap: 20%;
   }
 }
 .shows__info {
