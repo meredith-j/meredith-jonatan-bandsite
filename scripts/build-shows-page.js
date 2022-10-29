@@ -29,19 +29,20 @@
 const api_url = 'https://project-1-api.herokuapp.com/';
 const api_key = '65360b0c-86fb-405f-b51a-80e44616fbea';
 
-const showDates = axios
-    .get(`${api_url}/showdates?api_key=${api_key}`)
-    .then((response) => {
-
-    console.log()
-  })
-
-
 //select correct container to add JS to
 const showSectionDiv = document.querySelector('.shows__container-js');
 
+
+axios
+    .get(`${api_url}showdates?api_key=${api_key}`)
+    .then((response) => {
+    
+    const shows = response.data;
+    
+    newsArticles.forEach((shows) => {
+
 //tells JS to add entire list of comments to HTML
-for (let i = 0; i < shows.length; i++) {
+/*for (let i = 0; i < shows.length; i++) {
     const showItem = shows[i];
     console.log(showItem);
     generateCommentCard(showItem);
@@ -49,6 +50,7 @@ for (let i = 0; i < shows.length; i++) {
 
 //creating tags & classes for new HTML elements
 function generateCommentCard(show) {
+    */
 
     //article container to hold each show in
     const articleEl = document.createElement('article');
@@ -97,6 +99,7 @@ function generateCommentCard(show) {
     showTickets.innerText = 'Buy Tickets';
     articleEl.appendChild(showTickets);
 }
+)})
 
 const articleEl1 = document.querySelectorAll('.shows__event');
     
@@ -104,7 +107,7 @@ const articleEl1 = document.querySelectorAll('.shows__event');
 console.log (articleEl1);
 
     for (let i = 0; i < articleEl1.length; i++) {
-        const showsEvent = articleEl1[i];
+        const showsEvent = articleEl1[i]};
 
         showsEvent.addEventListener("click", function (event) {
             // handle the event - prevent page from reloading
@@ -122,7 +125,4 @@ console.log (articleEl1);
         else if (event.target.classList.contains("shows__event--clicked")) {
             showsEvent.classList.remove("shows__event--clicked");
         }
-
-        
-        })}
-
+    }) 
