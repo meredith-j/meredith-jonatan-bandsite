@@ -1,14 +1,4 @@
-/* 
-here is user comment code structure without assigned values, just in case i need
-it again.
-
-    {
-    date: "",
-    venue: "",
-    location: "",
-}; */
-
-let shows = [
+/*let shows = [
     {
         date: "Mon Sept 06 2021",
         venue: "Ronald Lane",
@@ -34,7 +24,18 @@ let shows = [
         venue: "Press Club",
         location: "San Fransisco, CA",
     }
-];
+];*/
+
+const api_url = 'https://project-1-api.herokuapp.com/';
+const api_key = '65360b0c-86fb-405f-b51a-80e44616fbea';
+
+const showDates = axios
+    .get(`${api_url}/showdates?api_key=${api_key}`)
+    .then((response) => {
+
+    console.log()
+  })
+
 
 //select correct container to add JS to
 const showSectionDiv = document.querySelector('.shows__container-js');
@@ -112,14 +113,16 @@ console.log (articleEl1);
             for (let i = 0; i < articleEl1.length; i++) {
                 const showsEvent = articleEl1[i];
             showsEvent.classList.remove("shows__event--clicked")
-        };
+            };
 
         if (!event.target.classList.contains("shows__event--clicked")) {
             showsEvent.classList.remove("shows__event--clicked");
             showsEvent.classList.add("shows__event--clicked");
         }
         else if (event.target.classList.contains("shows__event--clicked")) {
-            showsEvent.classList.toggle("shows__event--clicked");
+            showsEvent.classList.remove("shows__event--clicked");
         }
+
+        
         })}
 
