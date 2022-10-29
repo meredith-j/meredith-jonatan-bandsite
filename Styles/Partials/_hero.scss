@@ -2,9 +2,10 @@
 @use './breakpoints' as *;
 @use './mixins' as *;
 
-/*mobile hero is matches the mockup at 617px by 1108px but will scale
-nicely for users with screens as small as 350px*/
+// use this on any page that has a hero
 .hero {
+// "standard" dimsension are perfect for the shows page
+// anything that uses different dimensions should use a modifier class (&__image--<page-title>) that specifies correct dimensions
     margin: 0;
     background-size: cover;
     background-position: right;
@@ -19,21 +20,22 @@ nicely for users with screens as small as 350px*/
         min-height: 36rem;
     }
 
-/* no matter what screen size between 1280 and 1980, the bee will always
-be visible in the desktop, even as the image crops at certain screen sizes */
     @include desktop {
         background-position: top right;
         height: 48rem;
     }
 
+// this modifier is for the hero image displayed ONLY on the BIO page
     &__image--bio {
         background-image: url(../../Assets/Images/hero-bio.jpg);
     }
 
+// this modifier is for the hero image displayed ONLY on the SHOWS page
     &__image--shows {
         background-image: url(../assets/images/hero-shows.jpg);
         height: 25rem;
 
+// dimensions for the image on the shows page were slightly different than the bio page
         @include tablet {
             height: 38rem;
             background-position: center right;
@@ -44,9 +46,7 @@ be visible in the desktop, even as the image crops at certain screen sizes */
             background-position: center 30%;
         }
     }
-/* style guide says opacity should be set at 50% but doesn't match
-the mock up - not sure if this is just my computer but the colours
-were way too dull at 50% compared to the mock up */
+
     &__filter {
         position: absolute;
         background-size: inherit;
@@ -63,6 +63,7 @@ were way too dull at 50% compared to the mock up */
             height: 48rem;
         }
 
+//image on the shows page had slightly different dimensions
         &--shows {
             height: 25rem;
 

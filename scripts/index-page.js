@@ -1,17 +1,17 @@
 const api_url = 'https://project-1-api.herokuapp.com/';
-const api_key = '16e4ef4c-f077-4b04-95d3-ac07b99583ed';
+const api_key = 'c70d68c7-dba7-4991-bfca-72ba2529942e';
 
 //select correct container to add JS to
 const commentListEl = document.querySelector('.forum__container');
 
 //get request for API
-
 axios
     .get(`${api_url}comments?api_key=${api_key}`)
     .then((response) => {
     
     const comment = response.data;
-
+    
+    // create new elements via DOM for each comment
     comment.forEach((comment) => {
 
     // <article class="forum__comment">
@@ -62,6 +62,7 @@ axios
     commentContentEl.innerText = comment.comment;
     commentDiv.appendChild(commentContentEl);
 })})
+    .catch((err) => console.log(err));
 
 
 //target element for comment form
@@ -85,8 +86,13 @@ commentForm.addEventListener("submit", (event) => {
         //removing .forum__container
         commentListEl.innerHTML = '';
 
+        axios
+    .get(`${api_url}comments?api_key=${api_key}`)
+    .then((response) => {
+    
     const comment = response.data;
-
+    
+    // create new elements via DOM for each comment
     comment.forEach((comment) => {
 
     // <article class="forum__comment">
@@ -136,6 +142,10 @@ commentForm.addEventListener("submit", (event) => {
     commentContentEl.classList.add('forum__content');
     commentContentEl.innerText = comment.comment;
     commentDiv.appendChild(commentContentEl);
-})
-})
 })})
+        
+        })
+        .catch((err) => console.log(err));
+})
+        .catch((err) => console.log(err));
+})

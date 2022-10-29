@@ -3,6 +3,9 @@
 @use './breakpoints' as *;
 @use './mixins' as *;
 
+
+// use this partial for any page that has the footer
+
 .footer {
     background-color: $primary-black;
     color: $white;

@@ -508,8 +508,6 @@ tablet px range */
 /* matches mock up exactly at 1447px, however
 will scale nicely to any size within the
 tablet px range */
-/*mobile hero is matches the mockup at 617px by 1108px but will scale
-nicely for users with screens as small as 350px*/
 .hero {
   margin: 0;
   background-size: cover;
@@ -519,11 +517,6 @@ nicely for users with screens as small as 350px*/
   width: 100%;
   min-height: 20rem;
   z-index: 1;
-  /* no matter what screen size between 1280 and 1980, the bee will always
-  be visible in the desktop, even as the image crops at certain screen sizes */
-  /* style guide says opacity should be set at 50% but doesn't match
-  the mock up - not sure if this is just my computer but the colours
-  were way too dull at 50% compared to the mock up */
 }
 @media screen and (min-width: 768px) {
   .hero {

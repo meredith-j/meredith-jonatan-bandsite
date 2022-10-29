@@ -16,7 +16,7 @@ body {
     margin: 0;
 }
 
-//the sections on this page are specific to the bio page - content is not structured the same anywhere else
+//the sections on this page are specific to the bio page (index.html) - content is not structured the same anywhere else
 .about {
     display: flex;
     flex-direction: column;
@@ -42,6 +42,7 @@ body {
         }
         }    
 
+    // container for all content in the About the Musicians section
     &__container {
         display: flex;
         flex-direction: column;
@@ -56,6 +57,8 @@ body {
         }
     }
 
+    // container for the image in the About the Musicians section
+    // this image is cropped using the container
     &__image-container {
         @include desktop {
             align-self: center;
@@ -120,6 +123,7 @@ body {
         color: $hover-black;
     }
     
+    // should be two columns, used flexbox as per instructions
     &__more-info {
         color: $primary-black;
         display: flex;
@@ -204,16 +208,7 @@ body {
     }
 }
 
-
-
-/*    &__container {
-        background-color: navy;
-
-        :nth-child(2n + 4){
-            background-color: aquamarine;
-        }
-*/
-
+// styling the input areas of HTML form (Join the Conversation section)
 input, textarea {
     font-family: 'Avenir';
     font-size: 1.3rem;
@@ -227,6 +222,7 @@ input, textarea {
     flex-wrap: wrap;
 }
 
+// this is the container for the entire "Join the Conversation" section to set the width on the page
 .conversation__container {
     @include tablet {
         margin: auto;
@@ -238,6 +234,8 @@ input, textarea {
     }
 }
 
+
+// these classes are all for the HTML form ONLY -- posted comments are not included
 .comment {
     &__form {
         display: flex;
@@ -365,6 +363,7 @@ input, textarea {
     }    
 }
 
+// this section is for the posted comments ONLY -- new comment/HTML form styles are above
 .forum {
     padding: 2rem 1rem;
 
