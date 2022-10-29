@@ -537,21 +537,21 @@ nicely for users with screens as small as 350px*/
     height: 48rem;
   }
 }
-.hero--bio-image {
+.hero__image--bio {
   background-image: url(../../Assets/Images/hero-bio.jpg);
 }
-.hero--shows-image {
+.hero__image--shows {
   background-image: url(../assets/images/hero-shows.jpg);
   height: 25rem;
 }
 @media screen and (min-width: 768px) {
-  .hero--shows-image {
+  .hero__image--shows {
     height: 38rem;
     background-position: center right;
   }
 }
 @media screen and (min-width: 1280px) {
-  .hero--shows-image {
+  .hero__image--shows {
     height: 40rem;
     background-position: center 30%;
   }
@@ -837,7 +837,9 @@ body {
   border-radius: 0.25rem;
   width: 100%;
   padding: 1rem 0;
-  pointer-events: none;
+}
+.shows__tickets :hover {
+  background-color: #000000;
 }
 @media screen and (min-width: 768px) {
   .shows__tickets {

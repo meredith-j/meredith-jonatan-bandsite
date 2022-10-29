@@ -215,19 +215,22 @@ body {
 */
 
 #comment:focus {
+    font-family: 'Avenir';
     outline-color: $primary-black;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 1rem 1rem 6rem 1rem;
 }
 
 #name:focus {
+    font-family: 'Avenir';
     outline-color: $primary-black;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 0 0 0 1.2rem;
 }
 
 input, textarea {
-    font-size: 1.2rem;
+    font-family: 'Avenir';
+    font-size: 1.3rem;
     padding: 0 0 0 1.2rem;
     text-align: inherit;
     word-wrap: break-word;

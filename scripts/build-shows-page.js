@@ -119,7 +119,7 @@ console.log (articleEl1);
             showsEvent.classList.add("shows__event--clicked");
         }
         else if (event.target.classList.contains("shows__event--clicked")) {
-            showsEvent.classList.remove("shows__event--clicked");
+            showsEvent.classList.toggle("shows__event--clicked");
         }
         })}
 

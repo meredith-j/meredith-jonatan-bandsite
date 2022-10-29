@@ -149,7 +149,11 @@ body {
         border-radius: 0.25rem;
         width: 100%;
         padding: 1rem 0;
-        pointer-events: none;
+        //pointer-events: none;
+        
+        :hover {
+            background-color: $hover-black;
+        }
 
         @include tablet {
             width: 13rem;

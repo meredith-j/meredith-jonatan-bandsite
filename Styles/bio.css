@@ -412,21 +412,21 @@ nicely for users with screens as small as 350px*/
     height: 48rem;
   }
 }
-.hero--bio-image {
+.hero__image--bio {
   background-image: url(../../Assets/Images/hero-bio.jpg);
 }
-.hero--shows-image {
+.hero__image--shows {
   background-image: url(../assets/images/hero-shows.jpg);
   height: 25rem;
 }
 @media screen and (min-width: 768px) {
-  .hero--shows-image {
+  .hero__image--shows {
     height: 38rem;
     background-position: center right;
   }
 }
 @media screen and (min-width: 1280px) {
-  .hero--shows-image {
+  .hero__image--shows {
     height: 40rem;
     background-position: center 30%;
   }
@@ -908,19 +908,22 @@ body {
         }
 */
 #comment:focus {
+  font-family: "Avenir";
   outline-color: #323232;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 1rem 1rem 6rem 1rem;
 }
 
 #name:focus {
+  font-family: "Avenir";
   outline-color: #323232;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 0 0 0 1.2rem;
 }
 
 input, textarea {
-  font-size: 1.2rem;
+  font-family: "Avenir";
+  font-size: 1.3rem;
   padding: 0 0 0 1.2rem;
   text-align: inherit;
   word-wrap: break-word;

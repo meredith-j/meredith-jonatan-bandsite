@@ -26,11 +26,11 @@ be visible in the desktop, even as the image crops at certain screen sizes */
         height: 48rem;
     }
 
-    &--bio-image {
+    &__image--bio {
         background-image: url(../../Assets/Images/hero-bio.jpg);
     }
 
-    &--shows-image {
+    &__image--shows {
         background-image: url(../assets/images/hero-shows.jpg);
         height: 25rem;
 

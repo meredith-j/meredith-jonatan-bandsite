@@ -127,7 +127,7 @@ commentForm.addEventListener("submit", (event) => {
     addComment(name, newDate, comment);
 
     //removing .forum__container
-    commentListEl.innerHTML = '';
+    commentListEl.innerText = '';
 
     for (let i = 0; i < comments.length; i++) {
         const commentItem = comments[i];
