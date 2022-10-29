@@ -1,56 +1,19 @@
-/*let shows = [
-    {
-        date: "Mon Sept 06 2021",
-        venue: "Ronald Lane",
-        location: "San Fransisco, CA",
-    }, {
-        date: "Tue Sept 21 2021",
-        venue: "Pier 3 East",
-        location: "San Fransisco, CA",
-    }, {
-        date: "Fri Oct 15 2021",
-        venue: "View Lounge",
-        location: "San Fransisco, CA",
-    },  {
-        date: "Sat Nov 06 2021",
-        venue: "Hyatt Agency",
-        location: "San Fransisco, CA",
-    }, {
-        date: "Fri Nov 26 2021",
-        venue: "Moscow Center",
-        location: "San Fransisco, CA",
-    }, {
-        date: "Wed Dec 15 2021",
-        venue: "Press Club",
-        location: "San Fransisco, CA",
-    }
-];*/
-
 const api_url = 'https://project-1-api.herokuapp.com/';
 const api_key = '65360b0c-86fb-405f-b51a-80e44616fbea';
 
 //select correct container to add JS to
 const showSectionDiv = document.querySelector('.shows__container-js');
 
-
+//get request for API
 axios
     .get(`${api_url}showdates?api_key=${api_key}`)
     .then((response) => {
     
     const shows = response.data;
     
-    newsArticles.forEach((shows) => {
+    shows.forEach((show) => {
 
-//tells JS to add entire list of comments to HTML
-/*for (let i = 0; i < shows.length; i++) {
-    const showItem = shows[i];
-    console.log(showItem);
-    generateCommentCard(showItem);
-}
-
-//creating tags & classes for new HTML elements
-function generateCommentCard(show) {
-    */
+    //creating tags & classes for new HTML elements
 
     //article container to hold each show in
     const articleEl = document.createElement('article');
@@ -78,7 +41,7 @@ function generateCommentCard(show) {
     //generating show venues
     const showVenue = document.createElement('p');
     showVenue.classList.add('shows__info');
-    showVenue.innerText = show.venue;
+    showVenue.innerText = show.place;
     articleEl.appendChild(showVenue);
 
     //generating show city heading
@@ -101,28 +64,25 @@ function generateCommentCard(show) {
 }
 )})
 
+
+//target elements that contain the .shows__event class
 const articleEl1 = document.querySelectorAll('.shows__event');
     
 
-console.log (articleEl1);
-
-    for (let i = 0; i < articleEl1.length; i++) {
-        const showsEvent = articleEl1[i]};
-
-        showsEvent.addEventListener("click", function (event) {
+        articleEl1.addEventListener("click", function (event) {
             // handle the event - prevent page from reloading
             event.preventDefault();
 
             for (let i = 0; i < articleEl1.length; i++) {
                 const showsEvent = articleEl1[i];
-            showsEvent.classList.remove("shows__event--clicked")
-            };
+            articleEl1.classList.remove("shows__event--clicked")
+        };
 
         if (!event.target.classList.contains("shows__event--clicked")) {
-            showsEvent.classList.remove("shows__event--clicked");
-            showsEvent.classList.add("shows__event--clicked");
+            articleEl1.classList.remove("shows__event--clicked");
+            articleEl1.classList.add("shows__event--clicked");
         }
         else if (event.target.classList.contains("shows__event--clicked")) {
-            showsEvent.classList.remove("shows__event--clicked");
+            articleEl1.classList.remove("shows__event--clicked");
         }
-    }) 
+        })
