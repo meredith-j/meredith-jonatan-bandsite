@@ -214,20 +214,6 @@ body {
         }
 */
 
-#comment:focus {
-    font-family: 'Avenir';
-    outline-color: $primary-black;
-    font-size: 1.3rem;
-    padding: 1rem 1rem 6rem 1rem;
-}
-
-#name:focus {
-    font-family: 'Avenir';
-    outline-color: $primary-black;
-    font-size: 1.3rem;
-    padding: 0 0 0 1.2rem;
-}
-
 input, textarea {
     font-family: 'Avenir';
     font-size: 1.3rem;
@@ -321,6 +307,12 @@ input, textarea {
     }
 
     &__name {
+        &:focus {
+            font-family: 'Avenir';
+            outline-color: $primary-black;
+            font-size: 1.3rem;
+            padding: 0 0 0 1.2rem;
+        }
         color: $hover-black;
         background-color: $alabaster;
         border: 0.15rem solid $mercury;
@@ -331,6 +323,12 @@ input, textarea {
     
 
     &__draft {
+        &:focus {
+            font-family: 'Avenir';
+            outline-color: $primary-black;
+            font-size: 1.3rem;
+            padding: 1rem 1rem 6rem 1rem;
+        }
         resize: none;
         color: $hover-black;
         overflow-wrap: break-word;
@@ -343,9 +341,14 @@ input, textarea {
     }
 
     &__submit {
+        &:hover {
+            background-color: $hover-black;
+        }
+
         background-color: $primary-black;
         text-transform: uppercase;
         color: $white;
+        font-family: 'Avenir';
         font-size: 1.4rem;
         font-weight: 400;
         padding: 1.25rem 2.5rem;

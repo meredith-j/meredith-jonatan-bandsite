@@ -907,20 +907,6 @@ body {
             background-color: aquamarine;
         }
 */
-#comment:focus {
-  font-family: "Avenir";
-  outline-color: #323232;
-  font-size: 1.3rem;
-  padding: 1rem 1rem 6rem 1rem;
-}
-
-#name:focus {
-  font-family: "Avenir";
-  outline-color: #323232;
-  font-size: 1.3rem;
-  padding: 0 0 0 1.2rem;
-}
-
 input, textarea {
   font-family: "Avenir";
   font-size: 1.3rem;
@@ -1018,6 +1004,12 @@ input, textarea {
   border-radius: 0.5rem;
   height: 3.5rem;
 }
+.comment__name:focus {
+  font-family: "Avenir";
+  outline-color: #323232;
+  font-size: 1.3rem;
+  padding: 0 0 0 1.2rem;
+}
 .comment__draft {
   resize: none;
   color: #000000;
@@ -1028,15 +1020,25 @@ input, textarea {
   padding: 1rem 1rem 6rem 1rem;
   font-family: "Avenir";
 }
+.comment__draft:focus {
+  font-family: "Avenir";
+  outline-color: #323232;
+  font-size: 1.3rem;
+  padding: 1rem 1rem 6rem 1rem;
+}
 .comment__submit {
   background-color: #323232;
   text-transform: uppercase;
   color: #FFFFFF;
+  font-family: "Avenir";
   font-size: 1.4rem;
   font-weight: 400;
   padding: 1.25rem 2.5rem;
   border: none;
   border-radius: 0.5rem;
+}
+.comment__submit:hover {
+  background-color: #000000;
 }
 @media screen and (min-width: 768px) {
   .comment__submit {

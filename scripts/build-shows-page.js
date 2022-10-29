@@ -1,5 +1,5 @@
 const api_url = 'https://project-1-api.herokuapp.com/';
-const api_key = '65360b0c-86fb-405f-b51a-80e44616fbea';
+const api_key = '16e4ef4c-f077-4b04-95d3-ac07b99583ed';
 
 //select correct container to add JS to
 const showSectionDiv = document.querySelector('.shows__container-js');
@@ -67,22 +67,24 @@ axios
 
 //target elements that contain the .shows__event class
 const articleEl1 = document.querySelectorAll('.shows__event');
-    
 
-        articleEl1.addEventListener("click", function (event) {
+    for (let i = 0; i < articleEl1.length; i++) {
+        const showsEvent = articleEl1[i];
+
+        showsEvent.addEventListener("click", function (event) {
             // handle the event - prevent page from reloading
             event.preventDefault();
 
             for (let i = 0; i < articleEl1.length; i++) {
                 const showsEvent = articleEl1[i];
-            articleEl1.classList.remove("shows__event--clicked")
+            showsEvent.classList.remove("shows__event--clicked")
         };
 
         if (!event.target.classList.contains("shows__event--clicked")) {
-            articleEl1.classList.remove("shows__event--clicked");
-            articleEl1.classList.add("shows__event--clicked");
+            showsEvent.classList.remove("shows__event--clicked");
+            showsEvent.classList.add("shows__event--clicked");
         }
         else if (event.target.classList.contains("shows__event--clicked")) {
-            articleEl1.classList.remove("shows__event--clicked");
+            showsEvent.classList.remove("shows__event--clicked");
         }
-        })
+        })}
