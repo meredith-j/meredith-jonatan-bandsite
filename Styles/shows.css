@@ -336,6 +336,7 @@ button {
 }
 .footer__info {
   color: #e1e1e1;
+  text-decoration: none;
 }
 @media screen and (min-width: 768px) {
   .footer__info {

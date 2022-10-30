@@ -157,6 +157,7 @@
 
     &__info {
         color: $mercury;
+        text-decoration: none;
 
         @include tablet {
             font-size: 1.08rem;
