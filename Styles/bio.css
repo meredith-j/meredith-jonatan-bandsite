@@ -889,6 +889,10 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
   padding: 0.75rem 0 0 0;
+  filter: grayscale(100%);
+}
+.gallery__photo:hover {
+  filter: none;
 }
 @media screen and (min-width: 768px) {
   .gallery__photo {

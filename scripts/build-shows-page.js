@@ -1,5 +1,5 @@
 const api_url = 'https://project-1-api.herokuapp.com/';
-const api_key = '16e4ef4c-f077-4b04-95d3-ac07b99583ed';
+const api_key = 'df7d7017-5f9b-4e31-92aa-0d70af0a5d0b';
 
 //select correct container to add JS to
 const showSectionDiv = document.querySelector('.shows__container-js');
@@ -66,6 +66,7 @@ axios
 
 //target elements that contain the .shows__event class
 const articleEl1 = document.querySelectorAll('.shows__event');
+const featuredArticle = document.querySelectorAll('.shows__event--clicked');
 
 console.log(articleEl1)
 
@@ -84,7 +85,7 @@ console.log(articleEl1)
         if (!showsEvent.classList.contains("shows__event--clicked")) {
             showsEvent.classList.add("shows__event--clicked");
         } else {
-            showsEvent.classList.remove("shows__event--clicked");
+            featuredArticle.classList.remove("shows__event--clicked");
         }
         })}
     })

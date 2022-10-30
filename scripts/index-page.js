@@ -1,5 +1,5 @@
 const api_url = 'https://project-1-api.herokuapp.com/';
-const api_key = 'e7d01e54-96fa-4cd1-abaf-22e9469d1c1c';
+const api_key = 'df7d7017-5f9b-4e31-92aa-0d70af0a5d0b';
 
 //select correct container to add JS to
 const commentListEl = document.querySelector('.forum__container');
