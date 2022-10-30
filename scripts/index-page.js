@@ -13,6 +13,13 @@ axios
     
     const comment = response.data;
 
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth()+1;
+    let year = date.getFullYear();
+
+    let newDate = `${month}/${day}/${year}`;
+
     // create new elements via DOM for each comment
     comment.forEach((comment) => {
 
@@ -50,7 +57,7 @@ axios
     //comment date
     const commenterDateEl = document.createElement('p');
     commenterDateEl.classList.add('forum__date')
-    commenterDateEl.innerText = Date(comment.timestamp);
+    commenterDateEl.innerText = new Date(comment.timestamp).toISOString();
     nameDateDiv.appendChild(commenterDateEl);
 
     // div: container for comment

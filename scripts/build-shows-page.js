@@ -29,7 +29,7 @@ axios
     //generating show dates
     const showDate = document.createElement('p');
     showDate.classList.add('shows__featured');
-    showDate.innerText = show.date
+    showDate.innerText = new Date(show.date).toISOString();
     articleEl.appendChild(showDate);
 
     //generating show venue heading
@@ -67,6 +67,8 @@ axios
 //target elements that contain the .shows__event class
 const articleEl1 = document.querySelectorAll('.shows__event');
 
+console.log(articleEl1)
+
     for (let i = 0; i < articleEl1.length; i++) {
         const showsEvent = articleEl1[i];
 
@@ -79,11 +81,9 @@ const articleEl1 = document.querySelectorAll('.shows__event');
             showsEvent.classList.remove("shows__event--clicked")
         };
 
-        if (!event.target.classList.contains("shows__event--clicked")) {
-            showsEvent.classList.remove("shows__event--clicked");
+        if (!showsEvent.classList.contains("shows__event--clicked")) {
             showsEvent.classList.add("shows__event--clicked");
-        }
-        else if (event.target.classList.contains("shows__event--clicked")) {
+        } else {
             showsEvent.classList.remove("shows__event--clicked");
         }
         })}

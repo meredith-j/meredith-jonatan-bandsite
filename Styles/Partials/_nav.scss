@@ -50,6 +50,15 @@
         &__link-url {
             color: $mercury;
             text-decoration: none;
+            padding: 0 0 1.25rem 0;
+
+            @include tablet {
+                padding: 0 0 2.7rem 0;
+            }
+
+            @include desktop {
+                padding: 0 0 3.4rem 0;
+            }
 
             &--active {
                 color: $white;
@@ -58,18 +67,15 @@
 
         &__link--active {
                 color: $white;
-                padding: 0 0 1.25rem 0;
                 border-bottom: solid 0.25rem $white;
 
                 @include tablet {
                     font-weight: 600;
-                    padding: 0 0 2.7rem 0;
                     border-bottom: underline 0.15rem solid $white;
                     width: fit-content;
                 }
 
                 @include desktop {
-                padding: 0 0 3.4rem 0;
                 }
             }
 
