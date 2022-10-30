@@ -530,7 +530,7 @@ button {
 }
 @media screen and (min-width: 1280px) {
   .hero__info {
-    padding: 13rem 0 0 8.75rem;
+    padding: 13rem 0 0 13%;
   }
 }
 
@@ -560,7 +560,7 @@ button {
   .iframe {
     position: absolute;
     top: 12rem;
-    left: 46rem;
+    left: 60%;
     width: 28rem;
   }
 }

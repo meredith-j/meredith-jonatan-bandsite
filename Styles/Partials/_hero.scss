@@ -137,7 +137,7 @@
         }
     }
 
-    //flexbox for shows hero headings & iframe
+    //flexbox for SHOWS hero headings & iframe - does not affect other pages
     &__info {
         display: flex;
         flex-direction: column;
@@ -148,7 +148,7 @@
         }
 
         @include desktop {
-            padding: 13rem 0 0 8.75rem;
+            padding: 13rem 0 0 13%;
         }
     }
 }
@@ -177,7 +177,7 @@
     @include desktop {
         position: absolute;
         top: 12rem;
-        left: 46rem;
+        left: 60%;
         width: 28rem;
     }
 }
