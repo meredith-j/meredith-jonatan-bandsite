@@ -61,8 +61,7 @@ axios
     showTickets.classList.add('shows__tickets');
     showTickets.innerText = 'Buy Tickets';
     articleEl.appendChild(showTickets);
-}
-)})
+})
 
 
 //target elements that contain the .shows__event class
@@ -88,3 +87,4 @@ const articleEl1 = document.querySelectorAll('.shows__event');
             showsEvent.classList.remove("shows__event--clicked");
         }
         })}
+    })
