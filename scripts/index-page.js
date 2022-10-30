@@ -1,5 +1,5 @@
 const api_url = 'https://project-1-api.herokuapp.com/';
-const api_key = '0b0eff4a-806b-4524-bb53-3689a1421feb';
+const api_key = 'e89a28bc-38b4-4ec6-b3c8-a799b98e178d';
 
 //select correct container to add JS to
 const commentListEl = document.querySelector('.forum__container');
@@ -13,17 +13,14 @@ axios
     
     const comment = response.data;
 
-    function formatDate (){
-    comment.timestamp = new Date();
-    let day = date.getDate();
-    let month = date.getMonth()+1;
-    let year = date.getFullYear();
+/*    comment.sort(function(x, y) {
+        return comment[i].timestamp - comment[i++].timestamp;
+    })
+*/
 
-    let newDate = `${month}/${day}/${year}`;
-    }
-
-    // create new elements via DOM for each comment
+   // create new elements via DOM for each comment
     comment.forEach((comment) => {
+
 
     // <article class="forum__comment">
     const articleEl = document.createElement('article');
@@ -59,7 +56,7 @@ axios
     //comment date
     const commenterDateEl = document.createElement('p');
     commenterDateEl.classList.add('forum__date')
-    commenterDateEl.innerText = new Date(comment.timestamp).toLocaleDateString();
+    commenterDateEl.innerText = new Date(comment.timestamp).toLocaleDateString(); //this method converts dates to the correct format
     nameDateDiv.appendChild(commenterDateEl);
 
     // div: container for comment

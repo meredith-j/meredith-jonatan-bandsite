@@ -29,7 +29,7 @@ axios
     //generating show dates
     const showDate = document.createElement('p');
     showDate.classList.add('shows__featured');
-    showDate.innerText = new Date(show.date).toDateString();
+    showDate.innerText = new Date(show.date).toDateString(); //this method converts dates to the correct format
     articleEl.appendChild(showDate);
 
     //generating show venue heading
