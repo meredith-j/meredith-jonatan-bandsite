@@ -1,5 +1,5 @@
 const api_url = 'https://project-1-api.herokuapp.com/';
-const api_key = 'e89a28bc-38b4-4ec6-b3c8-a799b98e178d';
+const api_key = 'e7d01e54-96fa-4cd1-abaf-22e9469d1c1c';
 
 //select correct container to add JS to
 const commentListEl = document.querySelector('.forum__container');
@@ -13,10 +13,10 @@ axios
     
     const comment = response.data;
 
-/*    comment.sort(function(x, y) {
-        return comment[i].timestamp - comment[i++].timestamp;
+    comment.sort(function(x, y) {
+        return new Date(y.timestamp) - new Date(x.timestamp);
     })
-*/
+
 
    // create new elements via DOM for each comment
     comment.forEach((comment) => {
