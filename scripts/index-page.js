@@ -1,5 +1,5 @@
 const api_url = 'https://project-1-api.herokuapp.com/';
-const api_key = '6da7945d-3093-48a4-8497-535160e9b3cb';
+const api_key = '0b0eff4a-806b-4524-bb53-3689a1421feb';
 
 //select correct container to add JS to
 const commentListEl = document.querySelector('.forum__container');
@@ -50,7 +50,7 @@ axios
     //comment date
     const commenterDateEl = document.createElement('p');
     commenterDateEl.classList.add('forum__date')
-    commenterDateEl.innerText = comment.timestamp;
+    commenterDateEl.innerText = Date(comment.timestamp);
     nameDateDiv.appendChild(commenterDateEl);
 
     // div: container for comment
@@ -85,10 +85,12 @@ commentForm.addEventListener("submit", (event) => {
         .then(result => {
 
         //removing .forum__container
-        commentListEl.innerHTML = '';
+        commentListEl.innerText = '';
+        commentForm.reset()
 
         getComment()
         
         })
+        
         .catch((err) => console.log(error));
 })
