@@ -67,8 +67,17 @@ body {
         border-bottom: 0.1rem solid $silver;
 
         &--clicked {
+            padding: 1rem 2rem;
+            border-bottom: 0.1rem solid $silver;
             background-color: $mercury;
             pointer-events: none;
+
+            @include tablet {
+                padding: 1rem 1.5rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
         }
 
         @include tablet {

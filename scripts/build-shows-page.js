@@ -65,10 +65,8 @@ axios
 
 
 //target elements that contain the .shows__event class
-const articleEl1 = document.querySelectorAll('.shows__event');
-const featuredArticle = document.querySelectorAll('.shows__event--clicked');
-
-console.log(articleEl1)
+const articleEl1 = document.getElementsByTagName('article');
+//const featuredArticle = document.querySelectorAll('.shows__event--clicked');
 
     for (let i = 0; i < articleEl1.length; i++) {
         const showsEvent = articleEl1[i];
@@ -77,15 +75,51 @@ console.log(articleEl1)
             // handle the event - prevent page from reloading
             event.preventDefault();
 
+
+        if (showsEvent.classList.contains("shows__event--clicked")) {
+            showsEvent.classList.add("shows__event");
+            showsEvent.classList.remove("shows__event--clicked");
+        }         
+
+        if (!event.target.classList.contains("shows__event--clicked")) {
             for (let i = 0; i < articleEl1.length; i++) {
+                const showsEvent = articleEl1[i];
+            showsEvent.classList.remove("shows__event--clicked")
+            showsEvent.classList.add("shows__event")
+        }
+            showsEvent.classList.add("shows__event--clicked");
+            showsEvent.classList.remove("shows__event")
+        } 
+        
+        else {
+            showsEvent.classList.add("shows__event")
+        }
+        })
+    }
+})
+
+
+    /*    for (let i = 0; i < articleEl1.length; i++) {
+        const showsEvent = articleEl1[i];
+
+        showsEvent.addEventListener("click", function (event) {
+            // handle the event - prevent page from reloading
+            event.preventDefault();
+
+           for (let i = 0; i < articleEl1.length; i++) {
                 const showsEvent = articleEl1[i];
             showsEvent.classList.remove("shows__event--clicked")
         };
 
-        if (!showsEvent.classList.contains("shows__event--clicked")) {
+
+        if (showsEvent.classList.contains("shows__event--clicked")) {
+            showsEvent.classList.remove("shows__event--clicked");
+        } else if (!showsEvent.classList.contains('shows__event--clicked')) {
+            const featuredArticle = document.querySelector('.shows__event--clicked');
+            featuredArticle.classList.remove('shows__event--clicked')
             showsEvent.classList.add("shows__event--clicked");
         } else {
-            featuredArticle.classList.remove("shows__event--clicked");
+            showsEvent.classList.add("shows__event--clicked");
         }
         })}
-    })
+        */
