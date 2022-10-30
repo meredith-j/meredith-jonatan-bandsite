@@ -5,7 +5,7 @@ const api_key = 'e7d01e54-96fa-4cd1-abaf-22e9469d1c1c';
 const commentListEl = document.querySelector('.forum__container');
 
 
-function getComment() {
+function displayComment() {
 //get request for API
 axios
     .get(`${api_url}comments?api_key=${api_key}`)
@@ -73,7 +73,7 @@ axios
     .catch((error) => console.log(error));
 }
 
-getComment()
+displayComment()
 
 //target element for comment form
 const commentForm = document.getElementById("newComment");
@@ -94,7 +94,7 @@ commentForm.addEventListener("submit", (event) => {
         commentListEl.innerText = '';
         commentForm.reset()
 
-        getComment()
+        displayComment()
         
         })
         
